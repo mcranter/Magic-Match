@@ -1,50 +1,6 @@
-.row {
-    text-align: center;
-}
-
-.card {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: #eee;
-    cursor:pointer;
-}
-
-/* allows user to see outline when hovered over */
-.card:hover {
-    box-shadow: inset 0px 0px 0px 1px ;
-    box-sizing:  border-box;
-}
-
-/* card stylings*/
-.potter {
-    background-color: red;
-}
-
-.hallows {
-    background-color: pink;
-}
-
-.crest {
-    background-color: green;
-}
-
-.snitch {
-    background-color: aqua;
-}
-
-.darkmark {
-    background-color: orange;
-}
-
-.dobby {
-    background-color: gray;
-}
-
-.slytherin {
-    background-color: darkgoldenrod;
-}
-
-.wand {
-    background-color: purple;
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 800px;
 }
