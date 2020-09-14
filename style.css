@@ -7,7 +7,7 @@
 body {
     height: 100vh; /* sets to take up 100% space */
     display: flex; /*centres grid */
-    background: #060AB2;
+    background-image: url('images/qudditch2.jpg');
 }
 
 .memory-game {
@@ -16,20 +16,23 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;/* creates a deeper perspective when the card flips */
 }
 
 .memory-card {
-    width: calc(25% - 10px);/*calculates width relative to margin */
+    width: calc(25% - 10px);/*calculates width relative to the margin */
     height:calc(33.333% - 10px);
     position: relative;
     margin: 5px;
     transform: scale(1);
+    transform-style:preserve-3d; /* helps creates a 3d the card flips */
+    transition: transform .5s;
     }
 
 /* class becomes active when card is clicked */
 .memory-card:active {
     transform: scale(.97);
-    transition: transform.2s; /*smooths transition */
+    transition: transform .2s; /*smooths transition */
 }
 /* rotates card to create flip */
 .memory-card.flip {
