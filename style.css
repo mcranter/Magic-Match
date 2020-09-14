@@ -6,9 +6,39 @@
 
 body {
     height: 100vh; /* sets to take up 100% space */
+    display: flex; /*centres grid */
     background: #060AB2;
 }
 
-img {
-    width: 100px;
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.memory-card {
+    width: calc(25% - 10px);/*calculates width relative to margin */
+    height:calc(33.333% - 10px);
+    position: relative;
+    margin: 5px;
+    transform: scale(1);
+    }
+
+/* class becomes active when card is clicked */
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform.2s; /*smooths transition */
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #1c7ccc;
+    border: 2px solid yellow;
+}
+
