@@ -1,6 +1,14 @@
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    height: 600px;
-    width: 800px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; /* sets to take up 100% space */
+    background: #060AB2;
+}
+
+img {
+    width: 100px;
 }
