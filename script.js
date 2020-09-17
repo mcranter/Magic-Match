@@ -6,6 +6,7 @@ let firstCard, secondCard;
 
 function flipCard(){
     if (lockBoard) return;
+
     if (this === firstCard) return;
 
     this.classList.add('flip');
@@ -18,6 +19,7 @@ function flipCard(){
         return;
     }
     //second click
+    hasFlippedCard = false;
     secondCard = this;
 
     checkForMatch();
@@ -36,22 +38,32 @@ function checkForMatch () {
 function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard); 
+
+    resetBoard();
 }
 //unflips cards if there's no match 
 function unflipCards(){
     lockBoard = true;
+
     setTimeout(() => {
             firstCard.classList.remove('flip');
             secondCard.classList.remove('flip');
             
             resetBoard();
-        },  1500);
+        },  1000);
 }
 
-function resetBoard (){
+function resetBoard(){
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+// IIFE used to shufflie board upon game start
+(function shuffle() {
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12);
+        card.style.order = randomPos;
+    });
+})();
 
 cards.forEach(card => card.addEventListener('click', flipCard))
 ;
