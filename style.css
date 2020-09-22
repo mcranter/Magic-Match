@@ -75,7 +75,7 @@ body {
     position: absolute;
     border-radius: 5px;
     background: #1c7ccc;
-    border: 2px solid rgba(221, 221, 11, 0.897);
+    border: 4px solid rgba(221, 221, 11, 0.897);
     backface-visibility: hidden; /* hides that 'reverse' image of card */
 }
 
