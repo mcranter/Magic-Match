@@ -15,7 +15,7 @@ class AudioController {
         this.bgMusic.pause();
         this.bgMusic.currentTime = 0;
     }
-    flip() {
+   flip() {
         this.flipSound.play();
     }
     match(){
@@ -47,17 +47,36 @@ class mixer {
         this.matchedCards = [];
         this.busy = true;
     }
+    flipCard(card){
+        if(this.canFlipCard(card)) {
+            this.audioController.flip();
+            this.totalClicks++;
+            this.ticker.innerText = this.totalClicks;
+            //card.classList.add('visible');
+        }
+
+    }
+    canFlipCard(card) {
+        return true;
+      //  return(!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)// all three boolean conditions must return false to be true
+    }
 }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-
+    let game = new mixer(100, cards);
+    
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
-            //game.startGame();
+            game.startGame();
             
+        });
+    });
+    cards.forEach(card => {
+        card.addEventListener('click', () =>{
+           game.flipCard(card);
         });
     });
 }
@@ -67,4 +86,3 @@ if (document.readyState === 'loading'){
 }   else {
         ready();
 }
-//new mixer(100, cardsArray)
