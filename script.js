@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.card');
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -21,6 +21,7 @@ function flipCard(){
     //second click
     hasFlippedCard = false;
     secondCard = this;
+    
 
     checkForMatch();
 }
@@ -65,7 +66,4 @@ function resetBoard(){
     });
 })();
 
-cards.forEach(card => card.addEventListener('click', flipCard))
-;
-
-
+cards.forEach(card => card.addEventListener('click', flipCard));
