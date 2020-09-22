@@ -1,7 +1,18 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.game-info-container {
+    padding: 25px;
+}
+
+.game-container {
+    margin: 50px auto;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .game-info {
@@ -19,7 +30,7 @@
 body {
     height: 100vh; /* sets to take up 100% space */
    /* display: flex; /*centres grid */
-    background-image: url('images/lake.jpg');
+    background-image: url('images/hogwarts3.png');
     background-repeat: no-repeat;
     display: grid;
 }
@@ -31,6 +42,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;/* creates a deeper perspective when the card flips */
+    padding-bottom: 50px;
     /* background-image: url('images/dumblecore.png'); */
 }
 
@@ -42,6 +54,7 @@ body {
     transform: scale(1);
     transform-style:preserve-3d; /* helps creates the 3d card flips */
     transition: transform .5s;
+    cursor: url('images/cursor.cur'), auto;
     }
 
 /* class becomes active when card is clicked */
@@ -50,6 +63,7 @@ body {
     transition: transform .2s; /*smooths transition */
 }
 /* rotates card to create flip */
+
 .card.flip {
     transform:rotateY(180deg)
 }
@@ -72,7 +86,9 @@ body {
 .page-title {
     font-family: 'Grenze Gotisch', cursive;
     color: #ebd512;
-    font-size: 50px;
+    font-size: 150px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .overlay-text {
@@ -84,14 +100,15 @@ body {
     bottom: 0;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     z-index: 100;
     color:#ebd512;
     font-family: 'Grenze Gotisch', cursive;
+    transition: background-color 500ms, font-size 500ms;
 }
 
 .overlay-text.visible {
     display: flex;
-    flex-direction: column;
     animation: overlay-grow 500ms forwards;
 }
 
@@ -99,6 +116,7 @@ body {
     font-size: .3em;
 
 }
+
 /* Game over animation */
 @keyframes overlay-grow {
     from {
