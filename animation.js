@@ -48,13 +48,19 @@ class mixer {
         this.matchedCards = [];
         this.busy = true;
         setTimeout(() => {
-            this.audioController.startMusic();
+            this.audioController.startMusic(); 
             this.countdown = this.startCountdown();
             this.busy = false;
         }, 500)
-        
-        this.timer.innerText = this.timeRemaining;
+        this.hideCards();
+        this.timer.innerText = this.timeRemaining; //resets counter & timer 
         this.ticker.innerText = this.totalClicks;
+    }
+
+    hideCards(){
+        this.cardsArray.forEach(card => {
+            card.classList.remove('visible');
+        });
     }
     startCountdown() {
         return setInterval(() => {
@@ -74,30 +80,40 @@ class mixer {
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
     }
+     hideCards() {
+        this.cardsArray.forEach(card => {
+            card.classList.remove('visible');
+            card.classList.remove('matched');
+        });
+    }
     
-
     flipCard(card) {
         if(this.canFlipCard(card)) {
             this.audioController.flip();
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;
-            card.classList.add('visible');
+            //card.classList.add('visible');
 
-        /*    if(this.cardToCheck) {
+            if(this.cardToCheck) {
                 this.checkForCardMatch(card);
             } else {
                 this.cardToCheck = card;
-            } */
+            } 
         }
     }
-   /* checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+    checkForCardMatch(card) {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))//if clicked card = checked card it's a match
             this.cardMatch(card, this.cardToCheck);
         else 
             this.cardMismatch(card, this.cardToCheck); 
 
         this.cardToCheck = null;
-    } */
+    } 
+
+    getCardType(card) {
+        return card.getElementsByClassName('front-face')[0].src;
+    }
+
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
