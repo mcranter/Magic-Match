@@ -36,7 +36,7 @@ class mixer {
         this.cardsArray = cards;
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining')
+        this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
@@ -51,17 +51,20 @@ class mixer {
             this.audioController.startMusic(); 
             this.countdown = this.startCountdown();
             this.busy = false;
-        }, 500)
+        }, 500);
         this.hideCards();
         this.timer.innerText = this.timeRemaining; //resets counter & timer 
         this.ticker.innerText = this.totalClicks;
+        $('.card').removeClass('flip');
     }
 
-    hideCards(){
+    hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
+            card.classList.remove('matched'); 
         });
     }
+
     startCountdown() {
         return setInterval(() => {
             this.timeRemaining--;
@@ -80,19 +83,13 @@ class mixer {
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
     }
-     hideCards() {
-        this.cardsArray.forEach(card => {
-            card.classList.remove('visible');
-            card.classList.remove('matched');
-        });
-    }
     
     flipCard(card) {
         if(this.canFlipCard(card)) {
             this.audioController.flip();
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;
-            //card.classList.add('visible');
+            card.classList.add('visible');
 
             if(this.cardToCheck) {
                 this.checkForCardMatch(card);
