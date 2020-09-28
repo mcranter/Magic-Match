@@ -30,10 +30,10 @@
 body {
    /* height: 100vh; /* sets to take up 100% space */
    /* display: flex; /*centres grid */
-    background-image: url('images/qudditch2.jpg');
-    background-repeat: auto;
+    background-image: url('assets/images/castle-front.jpg');
+    background-repeat: no-repeat;
     display: grid;
-    position: relative;
+    position: center center;
 }
 
 .memory-game {
