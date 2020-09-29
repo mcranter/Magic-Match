@@ -17,6 +17,7 @@
     <div id="game-over-text" class="overlay-text">
         GAME OVER
         <span class="overlay-text-small">Click to Restart</span>
+        
     </div>
     <div id="victory-text" class="overlay-text">
         VICTORY
@@ -82,6 +83,21 @@
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
         </div>
+        <button data-modal-target="#modal">Menu</button>
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title"> Menu</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+            <ul>
+                <li>Instuctions</li>
+                <li>Sound</li>
+                <li>Level Select: Easy Medium Hard</li>
+            </ul>
+            </div>
+        </div>
+        <div id="overlay"></div>    
     </div>    
     <script src="assets/js/script.js"></script>
 </body>
