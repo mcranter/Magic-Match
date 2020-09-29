@@ -58,5 +58,13 @@ function resetBoard(){
     });
 })();
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+// cards.forEach(card => card.addEventListener('click', flipCard));
+
+document.querySelector('.memory-game').addEventListener('click', function (e) {
+	const parentElement = e.target.parentElement;
+	if (parentElement.classList.contains('card')) {
+		flipCard.call(parentElement);
+	}
+});
+
 
