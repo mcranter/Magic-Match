@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hogwarts Memory Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="page-title">Magic Match</div>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal1" style="font-family:'Grenze Gotisch'">How to Play</button>
+
+<!-- Modal 1 -->
+    <div id="myModal1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content How to Play  -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">How to Play</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="font-family:'Grenze Gotisch'">Can you find all the matching pairs of magical cards before the timer runs out?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal2" p style="font-family:'Grenze Gotisch'">Play</button>
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+<!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Game Options</h4>
+                </div>
+            <div class="modal-body">
+                <p>Easy (12 cards) <a class="btn btn-primary plybtn" href="index.html" role="button">Play</a></p>
+                <p>Medium (16 cards)<a class="btn btn-danger plybtn" href="indexMedium.html" role="button">Play</a></p>
+                <p>Hard (24 cards)<a class="btn btn-success plybtn" href="#" role="button">Play</a></p>
+            </div>
+            </div>
+        </div>
+    </div>    
+<!--menu option 3-->
+    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal3" p style="font-family:'Grenze Gotisch'">Sound</button>
+    <div id="myModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sound Options</h4>
+                </div>
+            <div class="modal-body">
+                <p>Sounds: 
+                <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false">On</button>
+                <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="mute()">Off</button></p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/landing-modals.js"></script>
+</body>
+</html>
