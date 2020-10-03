@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.card');
-
+//Modal controls
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
@@ -8,6 +8,13 @@ openModalButtons.forEach(button => {
     button.addEventListener('click',() => {
         const modal = document.querySelector(button.dataset.modalTarget)
         openModal(modal)
+    })
+})
+//closes modal by clicking outside it 
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
     })
 })
 closeModalButtons.forEach(button => {
@@ -23,7 +30,7 @@ function openModal(modal) {
     overlay.classList.add('active')
 }
 
-function closeModal(model) {
+function closeModal(modal) {
     if (modal == null) return
     modal.classList.remove('active')
     overlay.classList.remove('active')
