@@ -9,7 +9,6 @@
     <script src="assets/js/animation.js" async></script>
 </head>
 <body>
-
     <div class="page-title">Magic Match</div>
     <div class="overlay-text visible">
     Click to Start
@@ -34,7 +33,7 @@
                 Flips:<span id="flips">0</span>
             </div>
         </div>    
-
+<!--game board-->
         <div class="memory-game">
             <div class="card" data-image="darkmark">
                 <img class="front-face" src="assets/images/darkmark.png"  alt="darkmark pink">
@@ -85,15 +84,19 @@
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
         </div>
-<!--exit and mute-->
+<!--exit and mute buttons-->
         <div class="footer">
-            <button class="footbtn"><a href="index.html">Exit</a></button>
-            
-            <button type="button" class="footbtn" data-toggle="button" aria-pressed="false" onclick="stopMusic()">Mute</button>
-
+            <a href="index.html" type="button" class="footbtn">Quit</a>
+            <button onclick="stopMusic()" type="button" id="myBtn" class="footbtn">Mute</button>    
         </div>
-
-        <div id="overlay"></div>    
+<!--mute button script-->        
+        <script>
+        document.getElementById("myBtn").onclick = stopMusic();
+        function stopMusic() {
+            document.getElementById("myBtn").pause = stopMusic;
+            }
+        </script>
+        <div id="overlay"></div>
     </div>    
     <script src="assets/js/script.js"></script>
 </body>
