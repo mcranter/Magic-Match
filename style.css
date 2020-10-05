@@ -218,3 +218,15 @@ ul {
     float: right;
 }
 
+.footbtn {
+    background-color: #e9f543;
+    font-size: 16px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: 'Grenze Gotisch';
+    text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
