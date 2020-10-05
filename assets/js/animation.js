@@ -104,7 +104,7 @@ class mixer {
         }
     }
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))//if clicked card = checked card it's a match
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))//if clicked card = checked card, it's a match
             this.cardMatch(card, this.cardToCheck);
         else 
             this.cardMismatch(card, this.cardToCheck); 
