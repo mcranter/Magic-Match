@@ -85,20 +85,14 @@
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
         </div>
-   <button data-modal-target="#modal">Menu</button>
-        <div class="modal1" id="modal1">
-            <div class="modal1-header">
-                <div class="title"> Menu</div>
-                <button data-close-button class="close-button">&times;</button>
-            </div>
-            <div class="modal1-body">
-                <ul>
-                    <li><a href:>Instructions</a></li>
-                    <li>Sound: <a href="#" rel="modal:open">On</a>  <a href="#" rel="modal:open">Off</a></li>
-                    <li>Level Select: Easy Medium Hard</li>
-                </ul>
-            </div>
-        </div> 
+<!--exit and mute-->
+        <div class="footer">
+            <button class="footbtn"><a href="index.html">Exit</a></button>
+            
+            <button type="button" class="footbtn" data-toggle="button" aria-pressed="false" onclick="stopMusic()">Mute</button>
+
+        </div>
+
         <div id="overlay"></div>    
     </div>    
     <script src="assets/js/script.js"></script>
