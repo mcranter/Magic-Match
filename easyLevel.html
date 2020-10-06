@@ -85,17 +85,22 @@
             </div>
         </div>
 <!--exit and mute buttons-->
-        <div class="footer">
-            <a href="index.html" type="button" class="footbtn">Quit</a>
-            <button onclick="stopMusic()" type="button" id="myBtn" class="footbtn">Mute</button>    
-        </div>
-<!--mute button script-->        
+    <div class="footer">
+        <button onclick="playMusic()" type="button" class="footbtn">Play Music</button>
+        <button onclick="pauseMusic()" type="button" class="footbtn">Pause Music</button>     
+        <a href="index.html" type="button" class="footbtn">Quit</a> 
+        <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
         <script>
-        document.getElementById("myBtn").onclick = stopMusic();
-        function stopMusic() {
-            document.getElementById("myBtn").pause = stopMusic;
-            }
-        </script>
+        var Music = document.getElementById("bgmuzak"); 
+        function playMusic() { 
+            bgMusic.play(); 
+            } 
+        function pauseMusic() { 
+            bgMusic.pause(); 
+            } 
+        </script>    
+    </div>
+
         <div id="overlay"></div>
     </div>    
     <script src="assets/js/script.js"></script>
