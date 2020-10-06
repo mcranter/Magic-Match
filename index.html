@@ -61,8 +61,18 @@
                 </div>
             <div class="modal-body">
                 <p>Sounds: 
-                <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="startMusic()">On</button>
-                <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="stopMusic()">Off</button></p>
+                <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="playMusic()">On</button>
+                <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="pauseMusic()">Off</button></p>
+                <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
+            <script>
+            var Music = document.getElementById("bgmuzak"); 
+            function playMusic() { 
+                Music.play(); 
+                } 
+            function pauseMusic() { 
+                Music.pause(); 
+                } 
+            </script>
             </div>
             </div>
         </div>
