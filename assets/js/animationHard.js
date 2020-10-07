@@ -48,7 +48,7 @@ class mixer {
         this.matchedCards = [];
         this.busy = true;
         setTimeout(() => {
-            this.audioController.startMusic(); 
+//          this.audioController.startMusic(); 
             this.countdown = this.startCountdown();
             this.busy = false;
         }, 500);
@@ -148,7 +148,7 @@ if (document.readyState == 'loading') {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new mixer(60, cards);
+    let game = new mixer(80, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
