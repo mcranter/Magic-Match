@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="page-title">Magic Match</div>
+    <a href="index.html" class="page-title">Magic Match</a>
     <div class="overlay-text visible">
     Click to Start
     <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
@@ -105,10 +105,23 @@
         </div> 
         <div id="overlay"></div>   
     </div>    
-    <div class="quit">
-        <a href="index.html">Quit</a>
-    </div>
+    <!--exit and mute buttons-->
     <script src="assets/js/hardScript.js"></script>
-</body>
+</body>    
+<footer class="footer">
+    <button onclick="playMusic()" type="button" class="footbtn">Play Music</button>
+    <button onclick="pauseMusic()" type="button" class="footbtn">Pause Music</button>     
+    <a href="index.html" type="button" class="footbtn">Quit</a> 
+    <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
+    <script>
+    var Music = document.getElementById("bgmuzak"); 
+        function playMusic() { 
+            Music.play(); 
+            } 
+        function pauseMusic() { 
+            Music.pause(); 
+            } 
+    </script>    
+</footer>    
 </html>
 
