@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.instr {
+    font-family:'Grenze Gotisch'
+}
+
 .game-info-container {
     padding: 25px;
 }
@@ -19,6 +23,7 @@
     font-family: 'Grenze Gotisch', cursive;
     font-size: 50px;
     color: #ebd512;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .game-info-container {
@@ -90,6 +95,8 @@ body {
     font-size: 120px;
     text-align: center;
     margin-top: 50px;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
 }
 
 .overlay-text {
@@ -229,4 +236,10 @@ ul {
 
 a:visited {
   text-decoration: none;
+}
+
+.footer {
+    padding-top: 150px;
+    padding-left:320px;
+    padding-bottom: 100px;
 }
