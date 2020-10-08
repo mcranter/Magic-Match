@@ -9,7 +9,7 @@
     <script src="assets/js/animation.js" async></script>
 </head>
 <body>
-        <a href="index.html" class="page-title">Magic Match</a>
+    <a href="index.html" class="page-title">Magic Match</a>
     <div class="overlay-text visible">
     Click to Start
     <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
@@ -31,6 +31,9 @@
             </div>
             <div class="game-info">
                 Flips:<span id="flips">0</span>
+            </div>
+            <div class="game-info">
+                Level: Easy
             </div>
         </div>    
 <!--game board-->
@@ -85,21 +88,11 @@
             </div>
         </div>
 <!--exit and mute buttons-->
-    <div class="footer">
-        <button onclick="playMusic()" type="button" class="footbtn">Play Music</button>
-        <button onclick="pauseMusic()" type="button" class="footbtn">Pause Music</button>     
-        <a href="index.html" type="button" class="footbtn">Quit</a> 
-        <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
-        <script>
-        var Music = document.getElementById("bgmuzak"); 
-        function playMusic() { 
-            Music.play(); 
-            } 
-        function pauseMusic() { 
-            Music.pause(); 
-            } 
-        </script>    
-    </div>
+        <div class="footer1">
+            <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-music"></i></button>   
+            <a href="index.html" type="button" class="footbtn">Quit</a> 
+            <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio> 
+        </div>
         <div id="overlay"></div>
     </div>    
     <script src="assets/js/script.js"></script>
