@@ -34,6 +34,9 @@
             <div class="game-info">
                 Flips:<span id="flips">0</span>
             </div>
+            <div class="game-info">
+                Level: Hard
+            </div>
         </div>    
 
         <div class="memory-game">
@@ -85,7 +88,6 @@
                 <img class="front-face" src="assets/images/sortinghat.png" alt="sorting hat yellow">
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
-
             <div class="card" data-image="letter-white">
                 <img class="front-face" src="assets/images/letter-white.png" alt="letter white">
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
@@ -103,23 +105,14 @@
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
         </div> 
-<!--exit and mute buttons-->
-        <div class="footer">
-            <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-music"></i></button>   
-            <a href="index.html" type="button" class="footbtn">Quit</a> 
-            <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
-            <script>
-            var Music = document.getElementById("bgmuzak"); 
-            function playPause() {
-                if (Music.paused)
-                    Music.play();
-                else
-                    Music.pause();    
-            }
-            </script>    
-        </div>
-        <div id="overlay"></div>
     </div>    
+<!--exit and mute buttons-->
+    <div class="footer2">
+        <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-music"></i></button>   
+        <a href="index.html" type="button" class="footbtn">Quit</a> 
+        <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio> 
+    </div>
+    <div id="overlay"></div>    
     <script src="assets/js/hardScript.js"></script>
 </body>
 </html>
