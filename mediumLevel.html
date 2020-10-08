@@ -28,11 +28,14 @@
     </div>
     <div class="game-container">
         <div class="game-info-container">
-            <div class="game-info">
+            <div class="game-info1">
                 Time:<span id="time-remaining">100</span>
             </div>
-            <div class="game-info">
+            <div class="game-info1">
                 Flips:<span id="flips">0</span>
+            </div>
+            <div class="game-info1">
+                Level: Medium
             </div>
         </div>    
 
@@ -105,21 +108,11 @@
         </div>
     </div>    
     <!--exit and mute buttons-->
-    <div class="footer">
-        <button onclick="playMusic()" type="button" class="footbtn">Play Music</button>
-        <button onclick="pauseMusic()" type="button" class="footbtn">Pause Music</button>     
-        <a href="index.html" type="button" class="footbtn">Quit</a> 
-        <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
-        <script>
-        var Music = document.getElementById("bgmuzak"); 
-        function playMusic() { 
-            Music.play(); 
-            } 
-        function pauseMusic() { 
-            Music.pause(); 
-            } 
-        </script>    
-    </div>
+        <div class="footer2">
+            <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-music"></i></button>   
+            <a href="index.html" type="button" class="footbtn">Quit</a> 
+            <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio> 
+        </div>
         <div id="overlay"></div>  
     <script src="assets/js/mediumScript.js"></script>
 </body>    
