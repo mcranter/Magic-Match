@@ -6,7 +6,9 @@
 }
 
 .instr {
-    font-family:'Grenze Gotisch'
+    font-family:'Grenze Gotisch';
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .game-info-container {
@@ -22,6 +24,12 @@
 .game-info {
     font-family: 'Grenze Gotisch', cursive;
     font-size: 50px;
+    color: #ebd512;
+    text-shadow: 2px 2px 4px #000000;
+}
+.game-info1 {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 40px;
     color: #ebd512;
     text-shadow: 2px 2px 4px #000000;
 }
@@ -89,12 +97,20 @@ body {
     transform: rotateY(180deg);
 }
 
-.page-title {
+.page-title { 
     font-family: 'Grenze Gotisch', cursive;
     color: #ebd512;
     font-size: 120px;
     text-align: center;
     margin-top: 50px;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
+}
+
+.modal-title, .menu {
+    font-family: 'Grenze Gotisch', cursive;
+    color: #fafaf6;
+    text-align: center;
     text-shadow: 2px 2px 4px #000000;
     text-decoration: none;
 }
@@ -217,12 +233,21 @@ ul {
     font-size: 3rem;
 }
 
+.modal-body {
+    font-family: 'Grenze Gotisch';
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+}
+
 .modal-title {
     font-size: 3rem;
 }
 
 .plybtn {
     float: right;
+    background-color: #f0Ad4e;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .footbtn {
@@ -232,14 +257,54 @@ ul {
     border-radius: 8px;
     font-family: 'Grenze Gotisch';
     text-decoration: none;
+    color:rgb(254, 255, 254);
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#quit {
+    text-decoration: none;
+    color:rgb(254, 255, 254);
+    text-shadow: 2px 2px 4px #000000;
+    background-color:#ebd512;
 }
 
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-.footer {
+a:hover {
+    text-decoration: none;
+    color:#ebd512;
+}
+
+.footer2 {
     padding-top: 150px;
-    padding-left:320px;
+    padding-left:375px;
     padding-bottom: 100px;
+}
+
+.footer1 {
+    padding-top: 25px;
+    padding-bottom: 75px;
+    padding-left: 225px;
+}
+
+@media only screen and (max-width: 360px) {
+  .model-body {
+    font-size:20px;
+  }
+}
+
+.btn {
+    width: 200px;
+}
+
+.wholeMenu {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text-center {
+    padding-top: 5px;
+    padding-bottom:5px;
 }
