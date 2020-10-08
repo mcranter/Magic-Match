@@ -163,3 +163,11 @@ function ready() {
         });
     });
 }
+
+var Music = document.getElementById("bgmuzak"); 
+function playPause() {
+    if (Music.paused)
+        Music.play();
+    else
+        Music.pause();           
+    }

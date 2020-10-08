@@ -93,8 +93,8 @@ function resetBoard(){
         card.style.order = randomPos;
     });
 })();
-
 // cards.forEach(card => card.addEventListener('click', flipCard));
+
 
 document.querySelector('.memory-game').addEventListener('click', function (e) {
 	const parentElement = e.target.parentElement;
@@ -102,13 +102,3 @@ document.querySelector('.memory-game').addEventListener('click', function (e) {
 		flipCard.call(parentElement);
 	}
 });
-
-
-
-function mute(){
-    if(document.getElementById('bgMusic').muted == false){
-        document.getElementById('bgMusic').muted = true;
-    } else {
-        document.getElementById('bgMusic').muted = false;
-    }
-}
