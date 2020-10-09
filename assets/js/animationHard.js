@@ -48,7 +48,7 @@ class mixer {
         this.matchedCards = [];
         this.busy = true;
         setTimeout(() => {
-            this.audioController.startMusic(); 
+            //this.audioController.startMusic(); 
             this.countdown = this.startCountdown();
             this.busy = false;
         }, 500);
@@ -163,7 +163,7 @@ function ready() {
         });
     });
 }
-
+//play pause button on index.html
 var Music = document.getElementById("bgmuzak"); 
 function playPause() {
     if (Music.paused)
