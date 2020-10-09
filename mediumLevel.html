@@ -9,7 +9,6 @@
     <script src="assets/js/animationMedium.js" async></script>
 </head>
 <body>
-
     <a href="index.html" class="page-title">Magic Match</a>
     <div class="overlay-text visible">
     Click to Start
@@ -19,7 +18,6 @@
     GAME OVER
     <span class="overlay-text-small">Click to Restart</span>
     <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
-        
     </div>
     <div id="victory-text" class="overlay-text">
     VICTORY
@@ -38,7 +36,6 @@
                 Level: Medium
             </div>
         </div>    
-
         <div class="memory-game">
             <div class="card" data-image="darkmark">
                 <img class="front-face" src="assets/images/darkmark.png"  alt="darkmark pink">
@@ -105,15 +102,15 @@
                 <img class="front-face" src="assets/images/patronus.png" alt="patronus">
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
-        </div>
-    </div>    
-    <!--exit and mute buttons-->
+        </div> 
+    <!--footer exit and mute buttons-->
         <div class="footer2">
             <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-volume-up"></i></button>   
             <a href="index.html" type="button" class="footbtn">Quit</a> 
             <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio> 
         </div>
         <div id="overlay"></div>  
+    </div>    
     <script src="assets/js/mediumScript.js"></script>
 </body>    
 </html>
