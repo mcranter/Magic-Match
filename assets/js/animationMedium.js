@@ -1,3 +1,4 @@
+//creates the sounds and background music
 class AudioController {
     constructor() {
         this.bgMusic = new Audio('assets/sounds/hpBG.mp3');
@@ -40,7 +41,7 @@ class mixer {
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
-
+//function to start game, begin countdown and keep score
     startGame() {
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
@@ -103,8 +104,9 @@ class mixer {
             } 
         }
     }
+    //function checks if the clicked card is the same as the checked card
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))//if clicked card = checked card it's a match
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
             this.cardMatch(card, this.cardToCheck);
         else 
             this.cardMismatch(card, this.cardToCheck); 
@@ -122,7 +124,7 @@ class mixer {
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length)
+        if(this.matchedCards.length === this.cardsArray.length)//if all cards in array are sufficiently matched, show the victory modal
             this.victory();
     }
     cardMismatch(card1, card2) {
@@ -164,7 +166,9 @@ function ready() {
     });
 }
 
-var Music = document.getElementById("bgmuzak"); 
+//pauses or plays background music//
+var Music = document.getElementById("bgmuzak");
+
 function playPause() {
     if (Music.paused)
         Music.play();
