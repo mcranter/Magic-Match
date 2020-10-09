@@ -277,7 +277,7 @@ a:hover {
 
 .footer2 {
     padding-top: 150px;
-    padding-left:375px;
+    padding-left:225px;
     padding-bottom: 100px;
 }
 
@@ -304,17 +304,20 @@ a:hover {
 /* media query: iphone 5e/moto */
 @media only screen and (max-width: 360px) {
     .modal-body p {
-        font-size:30px;
-  }
+        font-size:20px;
+    }
 
     .page-title {
         font-size: 100px;
     }
 
     .plybtn {
-        width:50px;
-        font-size:75%;  
+        width:60px;
         text-shadow: 2px 2px 4px #000000;
-  }
-}
+        border-radius:15%;
+    }
 
+    a .plybtn {
+        color:antiquewhite;
+    }
+}     
