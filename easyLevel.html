@@ -10,6 +10,7 @@
 </head>
 <body>
     <a href="index.html" class="page-title">Magic Match</a>
+<!--overlays which appear before/after gameplay-->
     <div class="overlay-text visible">
     Click to Start
     <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
@@ -25,6 +26,7 @@
     <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
     <div class="game-container">
+<!--game info-->    
         <div class="game-info-container">
             <div class="game-info">
                 Time:<span id="time-remaining">100</span>
@@ -87,7 +89,7 @@
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
         </div>
-<!--exit and mute buttons-->
+<!--exit and play/pause buttons-->
         <div class="footer1">
             <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-volume-up"></i></button>   
             <a href="index.html" type="button" class="footbtn">Quit</a> 
