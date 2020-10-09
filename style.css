@@ -41,12 +41,10 @@
 }
 
 body {
-   /* height: 100vh; /* sets to take up 100% space */
-   /* display: flex; /*centres grid */
-    background-image: url('assets/images/castle-front.jpg');
+    background-image: url('assets/images/castle-spooky.jpg');
     background-repeat: no-repeat;
     display: grid;
-    position: center center;
+    position: center;
 }
 
 .memory-game {
@@ -289,12 +287,7 @@ a:hover {
     padding-left: 225px;
 }
 
-@media only screen and (max-width: 360px) {
-  .model-body {
-    font-size:20px;
-  }
-}
-
+/* Index page styles */
 .btn {
     width: 200px;
 }
@@ -308,3 +301,20 @@ a:hover {
     padding-top: 5px;
     padding-bottom:5px;
 }
+/* media query: iphone 5e/moto */
+@media only screen and (max-width: 360px) {
+    .modal-body p {
+        font-size:30px;
+  }
+
+    .page-title {
+        font-size: 100px;
+    }
+
+    .plybtn {
+        width:50px;
+        font-size:75%;  
+        text-shadow: 2px 2px 4px #000000;
+  }
+}
+
