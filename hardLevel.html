@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/693fd6c073.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!--overlays which appear before/after gameplay-->
     <a href="index.html" class="page-title">Magic Match</a>
     <div class="overlay-text visible">
     Click to Start
@@ -19,7 +20,6 @@
     GAME OVER
     <span class="overlay-text-small">Click to Restart</span>
     <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
-        
     </div>
     <div id="victory-text" class="overlay-text">
     VICTORY
@@ -38,7 +38,7 @@
                 Level: Hard
             </div>
         </div>    
-
+<!--game board-->
         <div class="memory-game">
             <div class="card" data-image="darkmark">
                 <img class="front-face" src="assets/images/darkmark.png"  alt="darkmark pink">
@@ -106,7 +106,7 @@
             </div>
         </div> 
     </div>    
-<!--exit and mute buttons-->
+<!--Footer buttons-->
     <div class="footer2">
         <button onclick="playPause()" type="button" id="playmute" class="footbtn">Play/Mute <i class="fas fa-volume-up"></i></button>   
         <a href="index.html" type="button" class="footbtn">Quit</a> 
