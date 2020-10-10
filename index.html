@@ -11,84 +11,83 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="assets/js/animation.js" async></script>
     <script src="https://kit.fontawesome.com/693fd6c073.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <a href="index.html" class="page-title">Magic Match</a>
     <!-- Trigger the modal with a button -->
-<div class="wholeMenu">
-    <div class="col-md-12 text-center"> 
-        <button type="button" class="btn btn-warning btn-lg menu" data-toggle="modal" data-target="#myModal1">How to Play <i class="fas fa-quidditch"></i></button>
+    <div class="wholeMenu">
+        <div class="col-md-12 text-center"> 
+            <button type="button" class="btn btn-warning btn-lg menu" data-toggle="modal" data-target="#myModal1">How to Play <i class="fas fa-quidditch"></i></button>
 
-    <!-- Modal 1 -->
-        <div id="myModal1" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-            <!-- Modal content How to Play  -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">How to Play   <i class="fas fa-quidditch"></i></h4>
+        <!-- Modal 1 -->
+            <div id="myModal1" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <!-- Modal content How to Play  -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">How to Play   <i class="fas fa-quidditch"></i></h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="instr"> Welcome to Magic Match, a magical memory matching game! </p><br>
+                            <p> There are 3 difficulty levels to choose from: Easy, Medium and Hard.</p>
+                            <p> Can you find all the matching pairs of magical cards before the timer runs out?</p><br>
+                            <p> Simply click a card to get started!</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>    
+            <!-- Modal 2 play-->
+        <div class="col-md-12 text-center">    
+            <button type="button" class="btn btn-warning btn-lg menu" data-toggle="modal" data-target="#myModal2" p style="font-family:'Grenze Gotisch'">Play <i class="fas fa-magic"></i></button>
+            <div id="myModal2" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+        <!-- Modal content play options-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Game Options</h4>
+                        </div>
                     <div class="modal-body">
-                        <p class="instr"> Welcome to Magic Match, a magical memory matching game! </p>
-                        <p class="instr"> There are 3 levels to choose from: Easy, Medium and Hard and each comes with its own challenges! Simply click to turn over the cards and get started.</p>
-                        <p class="instr"> Can you find all the matching pairs of magical cards before the timer runs out?</p>
+                        <p class="plytxt">Easy (12 cards, 100 seconds)<a class="btn btn-sm plybtn" href="easyLevel.html" role="button">Play</a></p>
+                        <p class="plytxt">Medium (16 cards, 80 seconds)<a class="btn btn-sm plybtn" href="mediumLevel.html" role="button">Play</a></p>
+                        <p class="plytxt">Hard (16 cards, 60 seconds)<a class="btn btn-sm plybtn" href="hardLevel.html" role="button">Play</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+        </div>       
+        <!--modal option 3 Sound-->
+        <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-warning btn-lg menu" data-toggle="modal" data-target="#myModal3">Sound <i class="fas fa-volume-up"> </i></button>
+            <div id="myModal3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Sound Options <i class="fas fa-volume-up"></i></h4>
+                        </div>
+                    <div class="modal-body">
+                        <p>Music: 
+                        <button type="button" class="btn btn-sm btn-secondary btn-toggle plybtn" data-toggle="button" aria-pressed="false" onclick="pauseMusic()" style="border: solid 1px #000000;">Off</button>
+                        <button type="button" class="btn btn-sm btn-secondary btn-toggle plybtn" data-toggle="button" aria-pressed="false" onclick="playMusic()" style="border: solid 1px #000000;">On</button></p>
+                        <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
+                    <script>
+                    var Music = document.getElementById("bgmuzak"); 
+                    function playMusic() { 
+                        Music.play(); 
+                        } 
+                    function pauseMusic() { 
+                        Music.pause(); 
+                        } 
+                    </script>
+                    </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>    
-        <!-- Modal 2 play-->
-    <div class="col-md-12 text-center">    
-        <button type="button" class="btn btn-warning btn-lg menu" data-toggle="modal" data-target="#myModal2" p style="font-family:'Grenze Gotisch'">Play <i class="fas fa-magic"></i></button>
-        <div id="myModal2" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-    <!-- Modal content play options-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Game Options</h4>
-                    </div>
-                <div class="modal-body">
-                    <p class="plytxt">Easy (12 cards, 100 seconds)<a class="btn btn-sm plybtn" href="easyLevel.html" role="button">Play</a></p>
-                    <p class="plytxt">Medium (16 cards, 80 seconds)<a class="btn btn-sm plybtn" href="mediumLevel.html" role="button">Play</a></p>
-                    <p class="plytxt">Hard (16 cards, 60 seconds)<a class="btn btn-sm plybtn" href="hardLevel.html" role="button">Play</a></p>
-                </div>
-                </div>
-            </div>
-        </div> 
-    </div>       
-    <!--modal option 3 Sound-->
-    <div class="col-md-12 text-center">
-        <button type="button" class="btn btn-warning btn-lg menu" data-toggle="modal" data-target="#myModal3">Sound <i class="fas fa-volume-up"> </i></button>
-        <div id="myModal3" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-            <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Sound Options <i class="fas fa-volume-up"></i></h4>
-                    </div>
-                <div class="modal-body">
-                    <p>Music: 
-                    <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="playMusic()">On</button>
-                    <button type="button" class="btn btn-sm btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" onclick="pauseMusic()">Off</button></p>
-                    <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
-                <script>
-                var Music = document.getElementById("bgmuzak"); 
-                function playMusic() { 
-                    Music.play(); 
-                    } 
-                function pauseMusic() { 
-                    Music.pause(); 
-                    } 
-                </script>
-                </div>
-                </div>
-            </div>
-        </div>
-        <script src="assets/js/script.js"></script>
-    </div>    
-</div>
+        </div>    
+    </div>
 </body>
 </html>
