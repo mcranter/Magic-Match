@@ -7,8 +7,8 @@
 
 .instr {
     font-family:'Grenze Gotisch';
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
 }
 
 .game-info-container {
@@ -232,20 +232,22 @@ ul {
 
 .modal-body {
     font-family: 'Grenze Gotisch';
-    text-shadow: 2px 2px 4px #000000;
-    color: white;
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
 }
 
 .modal-title {
     font-size: 3rem;
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
 }
 
 .plybtn {
     float: right;
     background-color: #f0Ad4e;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-}
+    color: black;
+    border: solid 1px #0c0c0c;
+    }
 
 .plybtn:hover {
     color:white;
@@ -307,7 +309,7 @@ a:active {
 
 .footer2 {
     padding-top: 200px;
-    padding-left:90px;
+    padding-left:75px;
     padding-bottom: 100px;
 }
 
@@ -320,7 +322,6 @@ a:active {
 /* Index page styles */
 .btn {
     width: 200px;
-    border: 1px solid #f0Ad4e;
 }
 
 .wholeMenu {
@@ -353,7 +354,7 @@ a:active {
     }
 }
 
-@media only screen and (max-width: 398px) {
+@media only screen and (max-width: 418px) {
     .modal-body p {
         font-size:20px;
     }
