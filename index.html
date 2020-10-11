@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="assets/js/animation.js" async></script>
     <script src="https://kit.fontawesome.com/693fd6c073.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -49,11 +48,11 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">Game Options</h4>
                         </div>
-                    <div class="modal-body">
-                        <p class="plytxt">Easy (12 cards, 100 seconds)<a class="btn btn-sm plybtn" href="easyLevel.html" role="button">Play</a></p>
-                        <p class="plytxt">Medium (16 cards, 80 seconds)<a class="btn btn-sm plybtn" href="mediumLevel.html" role="button">Play</a></p>
-                        <p class="plytxt">Hard (16 cards, 60 seconds)<a class="btn btn-sm plybtn" href="hardLevel.html" role="button">Play</a></p>
-                    </div>
+                        <div class="modal-body">
+                            <p class="plytxt">Easy (12 cards, 100 seconds)<a class="btn btn-sm plybtn" href="easyLevel.html" role="button">Play</a></p>
+                            <p class="plytxt">Medium (16 cards, 80 seconds)<a class="btn btn-sm plybtn" href="mediumLevel.html" role="button">Play</a></p>
+                            <p class="plytxt">Hard (16 cards, 60 seconds)<a class="btn btn-sm plybtn" href="hardLevel.html" role="button">Play</a></p>
+                        </div>
                     </div>
                 </div>
             </div> 
@@ -71,7 +70,7 @@
                         </div>
                     <div class="modal-body">
                         <p>Music: 
-                        <button type="button" class="btn btn-sm btn-secondary btn-toggle plybtn" data-toggle="button" aria-pressed="false" onclick="pauseMusic()" style="border: solid 1px #000000;">Off</button>
+                        <button type="button" class="btn btn-sm btn-secondary btn-toggle plybtn" data-toggle="button" aria-pressed="false" onclick="pauseMusic()" >Off</button>
                         <button type="button" class="btn btn-sm btn-secondary btn-toggle plybtn" data-toggle="button" aria-pressed="false" onclick="playMusic()" style="border: solid 1px #000000;">On</button></p>
                         <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
                     <script>
