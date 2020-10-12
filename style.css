@@ -55,9 +55,9 @@ body {
     flex-wrap: wrap;
     perspective: 1000px;/* creates a deeper perspective when the card flips */
     padding-bottom: 50px;
-    /* background-image: url('images/dumblecore.png'); */
 }
 
+/* Card elements */
 .card {
     width: calc(25% - 10px);/*calculates width relative to the margin */
     height:calc(33.333% - 10px);
@@ -67,7 +67,6 @@ body {
     transform-style:preserve-3d; /* helps creates the 3d card flips */
     transition: transform .5s;
     cursor: url('assets/images/cursor.cur'), auto;
-    -webkit-transform: rotateY(0deg);/* safari issue fix*/
     }
 
 /* class becomes active when card is clicked */
@@ -93,11 +92,16 @@ body {
     background: #0c0c0c;
     border: 4px solid #ebd512;
     backface-visibility: hidden; /* hides that 'reverse' image of card */
+    -webkit-backface-visibility: hidden;
 }
 
 .front-face {
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);/* safari issue fix*/
+/* safari issue fix*/
+    -webkit-webkit: rotateY(180deg);
+    -moz-webkit: rotateY(180deg);
+    -ms-webkit: rotateY(180deg);
+    -o-webkit: rotateY(180deg);
 }
 
 .page-title { 
