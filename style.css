@@ -42,7 +42,7 @@
 
 body {
     background-image: url('assets/images/castle-spooky.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     display: grid;
     position: center;
 }
