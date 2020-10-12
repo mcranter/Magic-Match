@@ -67,6 +67,7 @@ body {
     transform-style:preserve-3d; /* helps creates the 3d card flips */
     transition: transform .5s;
     cursor: url('assets/images/cursor.cur'), auto;
+    -webkit-transition: -webkit-transform 1s;
     }
 
 /* class becomes active when card is clicked */
