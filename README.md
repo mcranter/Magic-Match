@@ -102,8 +102,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) :
 - [Results]
-1. (Contact Result - Validator.htm)
-2. ()
+1. Index ![](assets/images/index-check.png)
+2. Easy ![](assets/images/easy-check.png)
 3. ()
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
@@ -184,7 +184,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   On the 'responsive' view there is a slight white margin at the right side of the header when resizing between 570px and 640px on the Responsive tab of the Chrome Developer tools. This wasn't resolved with media queries.  
+-   
 -   
 
 ## Deployment
