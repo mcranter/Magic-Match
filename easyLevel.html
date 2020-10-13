@@ -13,18 +13,19 @@
     <a href="index.html" class="page-title">Magic Match</a>
 <!--overlays which appear before/after gameplay-->
     <div class="overlay-text visible">
-    Click to Start
-    <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
+        Click to Start
+        <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
-    <div id="game-over-text" class="overlay-text">
-    GAME OVER
-    <span class="overlay-text-small">Click to Restart</span>
-    <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>    
+        <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+        <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>    
     </div>
     <div id="victory-text" class="overlay-text">
-    VICTORY
-    <span class="overlay-text-small">Click to Restart</span>
-    <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
+        VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+        <span class="overlay-text-small"><a href="mediumLevel.html" style="text-decoration: none; color: yellow;">Next Level</a></span>
+        <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
     <div class="game-container">
 <!--game info-->    
@@ -95,7 +96,6 @@
             <button onclick="playPause()" type="button" id="mute" class="footbtn">Play/Mute <i class="fas fa-volume-up"></i></button>   
             <a href="index.html" class="footbtn" style="border: solid 2px #000000;">Quit <i class="far fa-times-circle"></i></a> 
             <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio>
-            <a href="mediumLevel.html" class="footbtn" style="border: solid 2px #000000;">Next Level <i class="fa fa-level-up-alt"></i></a> 
         </div>
         <div id="overlay"></div>
     </div>    
