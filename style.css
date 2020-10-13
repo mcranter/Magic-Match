@@ -1,16 +1,10 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.instr {
-    font-family:'Grenze Gotisch';
-    text-shadow: 2px 2px 4px white;
-    color: rgb(12, 11, 11);
-}
-
+/*Game page styles */
 .game-info-container {
     padding: 25px;
 }
@@ -46,7 +40,7 @@ body {
     display: grid;
     position: center;
 }
-
+/*Board container */
 .memory-game {
     width: 640px;
     height: 640px;
@@ -113,6 +107,7 @@ body {
     text-decoration: none;
 }
 
+/* Modal & overlay styling */
 .modal-title, .menu {
     font-family: 'Grenze Gotisch', cursive;
     color: #fafaf6;
@@ -146,6 +141,9 @@ body {
     font-size: .3em;
 }
 
+.congr {
+    font-size: 140px;
+}
 
 /* Game over animation */
 @keyframes overlay-grow {
@@ -157,7 +155,6 @@ body {
         background-color: rgba(0,0,0,.8);
         font-size: 10em;
     }
-
 }
 
 .modal1 {
@@ -250,7 +247,7 @@ ul {
     text-shadow: 2px 2px 4px white;
     color: rgb(12, 11, 11);
 }
-
+/* Play buttons */
 .plybtn {
     float: right;
     background-color: #f0Ad4e;
@@ -281,6 +278,13 @@ ul {
     background-color:#ebd512;
 }
 
+.instr {
+    font-family:'Grenze Gotisch';
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
+}
+
+/* Footer/Menu button hover controls */
 a:visited {
     text-decoration: none;
 }
@@ -310,22 +314,23 @@ a:active {
     color:#ebd512;
 }
 
+/*Footer buttons */
 .footer3 {
     padding-top: 175px;
-    padding-left:150px;
+    padding-left:200px;
     padding-bottom: 100px;
 }
 
 .footer2 {
-    padding-top: 200px;
-    padding-left:75px;
+    padding-top: 175px;
+    padding-left:200px;
     padding-bottom: 100px;
 }
 
 .footer1 {
     /*padding-top: 25px;*/
     padding-bottom: 75px;
-    padding-left: 140px;
+    padding-left: 200px;
 }
 
 /* Index page styles */
@@ -342,10 +347,9 @@ a:active {
     padding-top: 5px;
     padding-bottom:5px;
 }
-/* media query: iphone 5e/moto */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 280px) and (min-width:250px) {
     .modal-body p {
-        font-size:20px;
+        font-size:10px;
     }
 
     .page-title {
@@ -353,7 +357,7 @@ a:active {
     }
 
     .plybtn {
-        width:60px;
+        width:30px;
         text-shadow: 2px 2px 4px #000000;
         border-radius:15%;
     }
@@ -363,7 +367,28 @@ a:active {
     }
 }
 
-@media only screen and (max-width: 418px) {
+/* media query: iphone 5e/moto */
+@media only screen and (max-width: 360px) {
+    .modal-body p {
+        font-size:15px;
+    }
+
+    .page-title {
+        font-size: 100px;
+    }
+
+    .plybtn {
+        width:45px;
+        text-shadow: 2px 2px 4px #000000;
+        border-radius:15%;
+    }
+
+    a .plybtn {
+        color:antiquewhite;
+    }
+}
+
+@media only screen and (max-width: 420px) {
     .modal-body p {
         font-size:20px;
     }
@@ -378,5 +403,22 @@ a:active {
         border: 2px solid #f0Ad4e;
         border-radius:15%;
     }
-
 }
+
+@media only screen and (max-width: 584px) and (min-width: 540px){
+    .modal-body p {
+        font-size:27px;
+    }
+
+    .page-title {
+        font-size: 100px;
+    }
+
+    .plybtn {
+        width:70px;
+        text-shadow: 2px 2px 4px #000000;
+        border: 2px solid #f0Ad4e;
+        border-radius:15%;
+    }
+}
+
