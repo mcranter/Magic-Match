@@ -1,6 +1,7 @@
+//Code created using tutorial by FreeCodeCamp (cited in Readme)
 const cards = document.querySelectorAll('.card');
 
-//Modal controls
+//Modal controls - Code created using tutorial by Web Dev Simplified (cited in Readme)
 function openModal(modal) {
     if (modal == null) return
     modal.classList.add('active')
@@ -13,6 +14,7 @@ function closeModal(modal) {
     overlay.classList.remove('active')
 }
 
+//All of following Code was created using tutorial by FreeCodeCamp (cited in Readme), until line 78
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -73,6 +75,8 @@ function resetBoard(){
     });
 })();
 
+//Following is written by me 
+//fixed issue with cards not flipping 
 document.querySelector('.memory-game').addEventListener('click', function (e) {
 	const parentElement = e.target.parentElement;
 	if (parentElement.classList.contains('card')) {
@@ -80,6 +84,7 @@ document.querySelector('.memory-game').addEventListener('click', function (e) {
 	}
 });
 
+//written by me 
 //quit modal
 function sure() {
   alert("Sure you want to quit?");

@@ -1,3 +1,4 @@
+//The following code was created using a tutorial by Web Dev Simplified (cited in Readme) unless otherwise stated
 //this class creates the sounds used in the game
 class AudioController {
     constructor() {
@@ -56,7 +57,7 @@ class mixer {
         this.hideCards();
         this.timer.innerText = this.timeRemaining; //resets counter & timer 
         this.ticker.innerText = this.totalClicks;
-        $('.card').removeClass('flip');
+        $('.card').removeClass('flip');//written by me
 	// shuffle board
 	this.cardsArray.forEach((card) => {
 		let randomPos = Math.floor(Math.random() * 12); //easy board has 12 cards
@@ -106,6 +107,7 @@ class mixer {
             } 
         }
     }
+
     checkForCardMatch(card) {
         if(this.getCardType(card) === this.getCardType(this.cardToCheck))//if clicked card = checked card, it's a match
             this.cardMatch(card, this.cardToCheck);
@@ -128,6 +130,7 @@ class mixer {
         if(this.matchedCards.length === this.cardsArray.length)
             this.victory();
     }
+
     cardMismatch(card1, card2) {
         this.busy = true;
         setTimeout(() => {
@@ -168,8 +171,9 @@ function ready() {
     });
 }
 
-var Music = document.getElementById("bgmuzak"); 
+//written by me//
 //plays/pauses background music 
+var Music = document.getElementById("bgmuzak"); 
 function playPause() {
     if (Music.paused)
         Music.play();

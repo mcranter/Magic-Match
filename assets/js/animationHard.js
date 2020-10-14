@@ -1,7 +1,8 @@
+//The following code was created using a tutorial by Web Dev Simplified (cited in Readme) unless otherwise stated
 //this class creates the sounds used in the game
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('assets/sounds/hpBG.mp3');
+        this.bgMusic = new Audio('assets/sounds/hpBG.mp3');//'this' indicates the variable belongs to bgMusic object
         this.flipSound = new Audio('assets/sounds/hpFLIP.mp3');
         this.matchSound = new Audio('assets/sounds/hpMATCH.mp3');
         this.victorySound = new Audio('assets/sounds/hpVICTORY.mp3');
@@ -42,7 +43,7 @@ class mixer {
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
-
+//generates game start conditions
     startGame() {
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
@@ -56,7 +57,7 @@ class mixer {
         this.hideCards();
         this.timer.innerText = this.timeRemaining; //resets counter & timer 
         this.ticker.innerText = this.totalClicks;
-        $('.card').removeClass('flip');
+        $('.card').removeClass('flip');//written by me
 	// shuffle board
 	this.cardsArray.forEach((card) => {
 		let randomPos = Math.floor(Math.random() * 16); //hard has 16 cards
@@ -166,6 +167,7 @@ function ready() {
         });
     });
 }
+//written by me
 //plays/ pauses background music 
 var Music = document.getElementById("bgmuzak"); 
 function playPause() {
