@@ -1,6 +1,7 @@
+//this class creates the sounds used in the game
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('assets/sounds/hpBG.mp3');
+        this.bgMusic = new Audio('assets/sounds/hpBG.mp3'); //'this' indicates the variable belongs to bgMusic object
         this.flipSound = new Audio('assets/sounds/hpFLIP.mp3');
         this.matchSound = new Audio('assets/sounds/hpMATCH.mp3');
         this.victorySound = new Audio('assets/sounds/hpVICTORY.mp3');
@@ -11,6 +12,7 @@ class AudioController {
     startMusic() {
         this.bgMusic.play();
     }
+    //stops music using javascript pause function
     stopMusic() {
         this.bgMusic.pause();
         this.bgMusic.currentTime = 0;
@@ -40,7 +42,7 @@ class mixer {
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
-
+//generates game start conditions
     startGame() {
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
@@ -48,7 +50,6 @@ class mixer {
         this.matchedCards = [];
         this.busy = true;
         setTimeout(() => {
-//          this.audioController.startMusic(); 
             this.countdown = this.startCountdown();
             this.busy = false;
         }, 500);
@@ -58,7 +59,7 @@ class mixer {
         $('.card').removeClass('flip');
 	// shuffle board
 	this.cardsArray.forEach((card) => {
-		let randomPos = Math.floor(Math.random() * 12);
+		let randomPos = Math.floor(Math.random() * 12); //easy board has 12 cards
 		card.style.order = randomPos;
 	});
     }
@@ -69,7 +70,7 @@ class mixer {
             card.classList.remove('matched'); 
         });
     }
-
+//starts countdown timer and updates value 
     startCountdown() {
         return setInterval(() => {
             this.timeRemaining--;
@@ -78,17 +79,19 @@ class mixer {
                 this.gameOver();
         }, 1000);
     }
+    //displays game over modal under correct conditions
     gameOver() {
         clearInterval(this.countdown);
         this.audioController.gameOver();
         document.getElementById('game-over-text').classList.add('visible');
     }
+    //displays victory modal under correct conditions
     victory() {
         clearInterval(this.countdown);
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
     }
-    
+    //counts and displays for the player the number of cards flipped
     flipCard(card) {
         if(this.canFlipCard(card)) {
             this.audioController.flip();
@@ -115,7 +118,7 @@ class mixer {
     getCardType(card) {
         return card.getElementsByClassName('front-face')[0].src;
     }
-
+    //determines and stores whether all cards are matched
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
@@ -133,7 +136,7 @@ class mixer {
             this.busy = false;
         }, 1000);
     }
-    
+    //boolean which determines if all values return false, will evaluate to true
     canFlipCard(card) {
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
     }
@@ -145,6 +148,7 @@ if (document.readyState == 'loading') {
     ready();
 }
 
+//creates the game settings before player starts
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -165,6 +169,7 @@ function ready() {
 }
 
 var Music = document.getElementById("bgmuzak"); 
+//plays/pauses background music 
 function playPause() {
     if (Music.paused)
         Music.play();
