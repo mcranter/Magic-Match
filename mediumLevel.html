@@ -10,24 +10,24 @@
     <script src="https://kit.fontawesome.com/693fd6c073.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!--overlays which appear before/after gameplay-->
+<!--overlays which appear before/after gameplay, created using WebDevSimplified guide cited in Readme-->
     <a href="index.html" class="page-title">Magic Match</a>
-        <div class="overlay-text visible">
+    <div class="overlay-text visible">
         Click to Start
         <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
-        <div id="game-over-text" class="overlay-text">
+    <div id="game-over-text" class="overlay-text">
         GAME OVER
         <span class="overlay-text-small">Click to Restart</span>
         <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
-        <div id="victory-text" class="overlay-text">
+    <div id="victory-text" class="overlay-text">
         VICTORY
         <span class="overlay-text-small">Click to Restart</span>
         <span class="overlay-text-small"><a href="hardLevel.html" style="text-decoration: none; color: yellow;">Next Level</a></span>
         <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
-<!--game info-->    
+<!--game container layout created using WebDevSimplified guide cited in Readme-->
     <div class="game-container">
         <div class="game-info-container">
             <div class="game-info1">
@@ -40,7 +40,7 @@
                 Level: Medium
             </div>
         </div>   
-<!--board game-->         
+<!--game board created using FreeCodeCamp guide cited in Readme-->
         <div class="memory-game">
             <div class="card" data-image="darkmark">
                 <img class="front-face" src="assets/images/darkmark.png"  alt="darkmark pink">
@@ -107,7 +107,7 @@
                 <img class="back-face" src="assets/images/hogwarts-back.png" alt="hogwarts back">
             </div>
         </div> 
-    <!--footer exit and mute buttons-->
+<!--quit and play/pause buttons-->
         <div class="footer2">
             <button onclick="playPause()" type="button" id="mute2" class="footbtn">Play/Mute <i class="fas fa-volume-up"></i></button>   
             <button onclick="sure()" class="footbtn" style="border: solid 2px #000000;">Quit <i class="far fa-times-circle"></i></button>  
