@@ -38,8 +38,8 @@ body {
     background-image: url('assets/images/castle-spooky.jpg');
     background-repeat: repeat;
     display: grid;
-    position: center;
 }
+
 /*Board container */
 .memory-game {
     width: 640px;
@@ -71,10 +71,6 @@ body {
 /* rotates card to create flip */
 .card.flip {
     transform:rotateY(180deg);
-    -webkit-webkit: rotateY(180deg);
-    -moz-webkit: rotateY(180deg);
-    -ms-webkit: rotateY(180deg);
-    -o-webkit: rotateY(180deg);
 }
 
 .front-face,
@@ -85,16 +81,12 @@ body {
     border-radius: 5px;
     background: #0c0c0c;
     border: 4px solid #ebd512;
-    backface-visibility: hidden; /* hides that 'reverse' image of card */
+    backface-visibility: hidden; /* hides that 'reverse' image of card - this is visible by default */
     -webkit-backface-visibility: hidden; /* fixed issue with card flip action in Safari*/
 }
 
 .front-face {
     transform: rotateY(180deg);
-    -webkit-webkit: rotateY(180deg);
-    -moz-webkit: rotateY(180deg);
-    -ms-webkit: rotateY(180deg);
-    -o-webkit: rotateY(180deg);
 }
 
 .page-title { 
@@ -347,28 +339,9 @@ a:active {
     padding-top: 5px;
     padding-bottom:5px;
 }
-@media only screen and (max-width: 280px) and (min-width:250px) {
-    .modal-body p {
-        font-size:10px;
-    }
-
-    .page-title {
-        font-size: 100px;
-    }
-
-    .plybtn {
-        width:30px;
-        text-shadow: 2px 2px 4px #000000;
-        border-radius:15%;
-    }
-
-    a .plybtn {
-        color:antiquewhite;
-    }
-}
 
 /* media query: iphone 5e/moto */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 360px) and (min-width:320px) {
     .modal-body p {
         font-size:15px;
     }
@@ -421,4 +394,6 @@ a:active {
         border-radius:15%;
     }
 }
+
+
 
