@@ -24,12 +24,14 @@ closeModalButtons.forEach(button => {
     })
 })
 
+//opens modal
 function openModal(modal) {
     if (modal == null) return
     modal.classList.add('active')
     overlay.classList.add('active')
 }
 
+//closes modal
 function closeModal(modal) {
     if (modal == null) return
     modal.classList.remove('active')
@@ -40,6 +42,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+//determines if card flipped is the first or second card
 function flipCard(){
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -64,7 +67,7 @@ function checkForMatch () {
     isMatch ? disableCards() : unflipCards();
 }
 
-//disables flipping in the event of a match
+//disables flipping in the event of a match by removing flip class
 function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard); 
@@ -82,19 +85,19 @@ function unflipCards(){
     },  1500);
 }
 
+//resets the board
 function resetBoard(){
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
-// IIFE used to shuffle board upon game start
+
+// IIFE (Immediately-invoked Function Expression) used to shuffle board upon game start
 (function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 16);
         card.style.order = randomPos;
     });
 })();
-
-// cards.forEach(card => card.addEventListener('click', flipCard));
 
 document.querySelector('.memory-game').addEventListener('click', function (e) {
 	const parentElement = e.target.parentElement;
@@ -103,12 +106,8 @@ document.querySelector('.memory-game').addEventListener('click', function (e) {
 	}
 });
 
-
-
-function mute(){
-    if(document.getElementById('bgMusic').muted == false){
-        document.getElementById('bgMusic').muted = true;
-    } else {
-        document.getElementById('bgMusic').muted = false;
-    }
+//quit modal
+function sure() {
+  alert("Sure you want to quit?");
+  window.location.href = 'index.html';
 }

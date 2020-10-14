@@ -10,6 +10,7 @@ openModalButtons.forEach(button => {
         openModal(modal)
     })
 })
+
 //closes modal by clicking outside it 
 overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active')
@@ -17,6 +18,7 @@ overlay.addEventListener('click', () => {
         closeModal(modal)
     })
 })
+
 closeModalButtons.forEach(button => {
     button.addEventListener('click',() => {
         const modal = button.closest('.modal')
@@ -24,12 +26,14 @@ closeModalButtons.forEach(button => {
     })
 })
 
+//open modal
 function openModal(modal) {
     if (modal == null) return
     modal.classList.add('active')
     overlay.classList.add('active')
 }
 
+//close modal
 function closeModal(modal) {
     if (modal == null) return
     modal.classList.remove('active')
@@ -40,6 +44,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+//determines if card flipped is the first or second card
 function flipCard(){
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -64,13 +69,14 @@ function checkForMatch () {
     isMatch ? disableCards() : unflipCards();
 }
 
-//disables flipping in the event of a match
+//disables flipping in the event of a match by removing flip class
 function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard); 
 
     resetBoard();
 }
+
 //unflips cards if there's no match 
 function unflipCards(){
     lockBoard = true;
@@ -82,19 +88,19 @@ function unflipCards(){
     },  1500);
 }
 
+//resets the board
 function resetBoard(){
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
-// IIFE used to shuffle board upon game start
+
+// IIFE (Immediately-invoked Function Expression) used to shuffle board upon game start
 (function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 16);
         card.style.order = randomPos;
     });
 })();
-// cards.forEach(card => card.addEventListener('click', flipCard));
-
 
 document.querySelector('.memory-game').addEventListener('click', function (e) {
 	const parentElement = e.target.parentElement;
@@ -102,3 +108,9 @@ document.querySelector('.memory-game').addEventListener('click', function (e) {
 		flipCard.call(parentElement);
 	}
 });
+
+//quit modal
+function sure() {
+  alert("Sure you want to quit?");
+  window.location.href = 'index.html';
+}
