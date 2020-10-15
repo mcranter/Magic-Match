@@ -1,9 +1,10 @@
 <h1 align="center">Milestone Project 2</h1>
 
+<h4>Welcome to Magical Match, a single-player card game testing memory recall and speed.</h4>
+
 [View the live project here.](https://mcranter.github.io/Milestone2/index.html)
 ![](assets/images/mockup1.jpg)
 
-Welcome to Magical Match, a single player card game testing memory and speed.
 
 ## User Experience (UX)
 
@@ -14,17 +15,15 @@ Welcome to Magical Match, a single player card game testing memory and speed.
         1. As a casual gamer, my priority is a fun gameplay experience.
         2. As a casual gamer I want the gameplay mechanism to be immediately obvious.
         3. If a level is too hard, I want the option to quit.
-        4. If a level is too easy, I want the option to select a more difficult one.
 
-        #### Experienced Player Goals
+    -   #### Experienced Player Goals
 
-        1. As an experienced gamer I want to be able to scale up the difficulty level if I want.
-        2. As an experienced gamer I want to be challenged.
-        3. As an experienced gamer I want game that encourages repeat plays.
+        1. As an experienced gamer I want to be challenged.
+        2. As an experienced gamer I want a game that encourages repeat plays.
 
     -   #### Game Designer's Goals
         1. To engage and entertain both casual and experienced game players.
-        2. To create an enjoyable, bug-free gameplay experience.
+        2. To create an enjoyable, rewarding bug-free gameplay experience.
         3. To encourage multiple replays.
 
     -   ### Design
@@ -42,6 +41,7 @@ Welcome to Magical Match, a single player card game testing memory and speed.
     -   Game board Wireframes (Desktop/Mobile) - [View](https://bit.ly/2Fl7tsa), [View](https://bit.ly/33Q3hKn)
     -   Victory Modal Wireframe - [View](https://bit.ly/3nH8P1W)
 
+![](assets/images/mockup2.jpg)
 
 ## Features
 
@@ -50,6 +50,7 @@ Welcome to Magical Match, a single player card game testing memory and speed.
 -   Sounds: This game uses sounds to alert the player to various events (like the existence of a match, victory or the end of the game.) Using sounds during these events also helps create [positive reinforcement ](https://game-design-snacks.fandom.com/wiki/Positive_Reinforcement_Through_Audio_Visual_Cues) which encourages repeat game playing.
 
 -   Interactive play mechanism playable on all devices.
+
 
 ### Future Features
 
@@ -96,17 +97,21 @@ Welcome to Magical Match, a single player card game testing memory and speed.
 1. [Magic Mockups:](https://magicmockups.com/)
     - Magic Mockups was used to generate images used through this file.    
 
+
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) :
-- [Results]
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) -
+Results
 1. Index ![](assets/images/index-check.png)
 2. Easy ![](assets/images/easy-check.png)
-3. ()
+3. Medium ![](assets/images/medium-check.png)
+4. Hard ![](assets/images/hard-check.png)
 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results
+1.  CSS ![](assets/images/css-check.png)
+
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -122,82 +127,72 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
         2. The landing (index.html) page contains a clearly labelled 'How to play' button/modal which informs the player of the gameplay mechanics.
 
+    3. "If a level is too hard, I want the option to quit."
 
-    3. "As a new fan I want to hear/see the band's work."
-
-        1. The About Us page enables the visitor to see the band's latest video, hear the band's music via a playlist and view the band's entire discography.
-        2. The Gallery page contains images of the band's past performances.
+        1. Each level contains a 'quit' button under the game board.
+        2. The Game Over/ Victory contains a 'quit' option.
 
 -   #### Experienced Player Goals
 
-    1. "As a wedding planner, I want to look into booking this band".
+    1. "As an experienced gamer I want to be challenged."
+        1. The game has 3 levels of difficulty, increasing in difficulty. The player can either clear each level, starting at Easy and playing through to Hard, or select from 'Easy', 'Medium' or 'Hard' in the Play menu on the game's landing page.
+        2. The Hard level is designed to be a challenge even to experienced players, with limited time (60 seconds) to match 16 cards.
 
-        1. Contact details are  clearly signposted on the contact page making it easy to find and contact the band.
-        2. Wedding reviews promoted on the home page add an inducement to book the band.
+    2. "As an experienced gamer I want a game that encourages repeat plays."
+        1. The incremental increase in difficulty encourages continuous, repeatitive play. 
+        2. The difficulty of the Hard level, though not prohibitively difficult, is challenging enough that it should take more than one play to beat.
 
-    2. "As a record company exec I want to gauge this band's talent."
 
-        1. Samples of the band's music - video and an audio playlist - are embedded on the About Us page to make it easy to experience the band's work with minimal effort.
-        2. The Gallery page contains thrilling images of the band live which serve as both endorsement and advertisement to any potential music industry professionals.
+![](assets/images/mockup3.jpg)
+
 
 -   #### Game Designer's Goals
 
-    1. "As an existing fan, I want to keep up with the band's activities."
+    1. "To engage and entertain both casual and experienced game players"
 
-        1. Links to the band's social media pages, where updates can be found is displayed on the footer of each page. The About Us page contains links to the individual band member Twitter accounts under their respective profiles. In addition, a Newsletter sign up form appears on the bottom of each page.
+        1. This is achieved through a combination of easy-to-understand gameplay mechanics and the abilty to either select a level based on difficulty. 
 
-    1. "As an existing fan, I want to view the band's gallery."
+    2. "To create an enjoyable, rewarding bug-free gameplay experience."
 
-        1. The Gallery, clearly signposted in the header, contains numerous images and is engaging on both desktop/tablet and mobile.
+        1. Much testing has been done to assure that the game looks and plays well on all devices.
 
-    1.  "As an existing fan, I want to buy some merchandise."
+    3.  "To encourage multiple replays."
 
-        1. The Home page contains a selection of merchandise, clearly labeled and laid out.
-
-
-    1.   "As an existing fan, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the band."
-
-        1. Each page contains a minimalist, but clearly marked Newsletter form just above the Footer.
-
--       #### Band/ Site Owner Goals
-
-    3. "As the owner of the site and member of the band, I wish to increase our revenue."
-
-        1. As the this is a priority: both merchandise and professional services (in the form of wedding performances) are advertised on the Home page by way of the 'Review' section.
-        2. Merchandise is offered in the form of various items after the 'Review' section.
+        1. This is achieved by making the game enjoyable and easy to interact. Players who 'beat' the Hard level are rewarded with an amusing message of congratulations from Professor Dumbledore.
 
 
--   #### Frequent User Goals
+![](assets/images/mockup4.jpg)
 
-    1. "As a Frequent Visitor, I want to check to see if there are any updates to the band."
-
-        1. The inclusion of clickable social media icons in the Footer makes keeping up-to-date in real-time possible.
-        2. The inclusion of the respective band member's Twitter handles on the About Us page facilitates communication of updates.
-        3. The Newsletter sign up form offers the chance to keep informed.
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone5/6/7/8,iPhoneX, iPad, Moto, Galaxy 5.
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+-   The game was tested on Chrome, Safari and Firefox browsers.
+-   The website was viewed and tested on a variety of devices, mobile and desktop.
+-   Friends and family members were asked to play the game and point out any bugs and/or user experience issues.
+
 
 ### Known Bugs
 
--   
--   
+-   Resolved: Issue with cards not flipping in Safari - fixed as per [this](https://www.w3schools.com/cssref/css3_pr_backface-visibility.asp) W3 documentation.
+-   Ongoing: Issue with font sizing on game options page on both iPhone 5 and Galaxy Fold devices in Chrome's Developer Tools, unresolved by media queries.
+
 
 ## Deployment
 
 The site has been deployed to github and is accessible on [gitpages](https://mcranter.github.io/Milestone2/index.html)
 
+
 ## Credits
 
 ### Code
 
--   The Newsletter sign-up form code appearing on the bottom of each page was written with the help of [this](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_inline_form) W3 Schools guide.
+-   The basic game mechanics including board creation, card flipping and the card shuffle algorithm are based on FreeCodeCamp's Youtube guide [here](https://youtu.be/ZniVgo8U7ek).
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   The victory/game over/start modals on the game pages were created using [this](https://youtu.be/28VfzEiJgy4) YouTube guide by [WebDev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw).
+
+-   The flip count/timer counters/sounds and other animation functions were created using [this](https://youtu.be/3uuQ3g92oPQ) Youtube guide by [PortEXE](https://www.youtube.com/channel/UCjGQyJCSU_VVMTu5nigonqg).
+
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library was used during the project for [Modal](https://getbootstrap.com/docs/4.0/components/modal/) creation.
 
 
 ### Content
@@ -206,9 +201,15 @@ The site has been deployed to github and is accessible on [gitpages](https://mcr
 
 ### Media
 
--   All Images were created by the developer unless otherwise stated.
+-   Castle background image from [Pixabay](https://pixabay.com/photos/spooky-house-castle-haunted-1756641/)
+-   All other images were created by the developer unless otherwise stated. 
+
+-   Victory modal image by Tumblr user [floccinaucinihilipilification](https://floccinaucinihilipilificationa.tumblr.com/post/102292682900).
+
 
 ### Acknowledgements
+
+-   Thanks to JK Rowling, creator of the Harry Potter series of books which inspired the theme of this game.
 
 -   Thanks to my Mentor Precious Ijege for continuous helpful feedback.
 
