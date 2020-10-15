@@ -41,7 +41,9 @@
     -   Game board Wireframes (Desktop/Mobile) - [View](https://bit.ly/2Fl7tsa), [View](https://bit.ly/33Q3hKn)
     -   Victory Modal Wireframe - [View](https://bit.ly/3nH8P1W)
 
+
 ![](assets/images/mockup2.jpg)
+
 
 ## Features
 
