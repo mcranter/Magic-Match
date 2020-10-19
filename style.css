@@ -410,4 +410,27 @@ a:active {
     }
 }
 
+/* Resizes victory modal elements */
+@media screen and (max-width: 1024px) {
+    #dumblecore {
+        width: 600px;
+        height: auto;
+    }
 
+    .congr {
+        font-size: 100px;
+    }
+}
+@media screen and ( min-width: 1025px) {
+    #dumblecore { 
+        width: 500px;
+    }
+
+    #dumblecore { 
+    height: auto; 
+    }
+
+    .congr {
+        font-size: 100px;
+    }
+}
