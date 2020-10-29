@@ -260,13 +260,15 @@ Land page styles */
 
 .footbtn {
     background-color: #ebd512;
-    font-size: 16px;
+    font-size: 22px;
     padding: 10px 24px;
     border-radius: 8px;
     font-family: 'Grenze Gotisch';
     text-decoration: none;
     color:rgb(254, 255, 254);
     text-shadow: 2px 2px 4px #000000;
+    height: 80px;
+    width: 150px;
 }
 
 #quit {
@@ -312,19 +314,22 @@ a:active {
     color:#ebd512;
 }
 
-/*Footer buttons */
+/*Footer buttons 
+Hard */
 .footer3 {
     padding-top: 175px;
-    padding-left:200px;
+    padding-left:170px;
     padding-bottom: 100px;
 }
 
+/* medium */
 .footer2 {
     padding-top: 175px;
     padding-left:200px;
     padding-bottom: 100px;
 }
 
+/* hard */
 .footer1 {
     padding-bottom: 75px;
     padding-left: 200px;
@@ -421,7 +426,7 @@ a:active {
         font-size: 100px;
     }
 }
-@media screen and ( min-width: 1025px) {
+@media screen and (min-width: 1025px) {
     #dumblecore { 
         width: 500px;
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Hogwarts Memory Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
     <script src="assets/js/animationHard.js" async></script>
     <script src="https://kit.fontawesome.com/693fd6c073.js" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
     <div id="victory-text" class="overlay-text">
         <p class="congr">Congratulations!</p> 
         <p class="congr">Yer a wizard!</p>
-        <img src="assets/images/dumblecore.png" alt="illustrated sexy dumbledore"/>
+        <img src="assets/images/dumblecore.png" alt="illustrated sexy dumbledore" id="dumblecore"/>
         <span class="overlay-text-small">Click to Restart</span>
         <span class="overlay-text-small"><a href="index.html" style="text-decoration: none; color: yellow;">Quit</a></span>
     </div>
@@ -110,7 +110,8 @@
 <!--Footer buttons-->
         <div class="footer3">
             <button onclick="playPause()" id="mute2" class="footbtn">Play/Mute <i class="fas fa-volume-up"></i></button>   
-            <button onclick="sure()" class="footbtn" style="border: solid 2px #000000;">Quit <i class="far fa-times-circle"></i></button>             <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio> 
+            <button onclick="sure()" class="footbtn" style="border: solid 2px #000000;">Quit<br><i class="far fa-times-circle"></i></button>             
+            <audio id="bgmuzak"><source src="assets/sounds/hpBG.mp3" type="audio/mp3"></audio> 
         </div>
         <div id="overlay"></div>
     </div>        
