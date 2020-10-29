@@ -251,6 +251,7 @@ Land page styles */
     background-color: #f0Ad4e;
     color: black;
     border: solid 1px #0c0c0c;
+    font-size: 15px;
     }
 
 .plybtn:hover {
@@ -362,7 +363,7 @@ Hard */
 
     .plybtn {
         width:45px;
-        text-shadow: 2px 2px 4px #000000;
+        text-shadow: 2px 2px 4px #fcfcfc;
         border-radius:15%;
     }
 
@@ -382,7 +383,7 @@ Hard */
 
     .plybtn {
         width:60px;
-        text-shadow: 2px 2px 4px #000000;
+        text-shadow: 2px 2px 4px #fcfcfc;
         border: 2px solid #f0Ad4e;
         border-radius:15%;
     }
@@ -399,7 +400,7 @@ Hard */
 
     .plybtn {
         width:70px;
-        text-shadow: 2px 2px 4px #000000;
+        text-shadow: 2px 2px 4px #faf7f7;
         border: 2px solid #f0Ad4e;
         border-radius:15%;
     }
@@ -409,7 +410,7 @@ Hard */
     }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1024px){
     .victory-text {
         height: 600px;
     }
@@ -426,6 +427,7 @@ Hard */
         font-size: 100px;
     }
 }
+
 @media screen and (min-width: 1025px) {
     #dumblecore { 
         width: 500px;
