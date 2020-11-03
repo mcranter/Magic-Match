@@ -181,7 +181,7 @@ function playPause() {
         Music.pause();           
     }
 
-var Sounds = AudioController;
+var Sounds = document.getElementsByClassName("AudioControlller")
 function soundPause() {
     if (Sounds.paused)
         Sounds.play();
