@@ -180,3 +180,11 @@ function playPause() {
     else
         Music.pause();           
     }
+
+var Sounds = AudioController;
+function soundPause() {
+    if (Sounds.paused)
+        Sounds.play();
+    else
+        Sounds.pause();           
+    }     
