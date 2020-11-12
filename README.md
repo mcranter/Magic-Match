@@ -10,6 +10,14 @@
 
 -   ### User stories
 
+    -   #### General User Goals
+
+        1. As a user, I want to be able to read the games instruction (how to play the game)
+        2. As a user,  I want to be able to toggle on/off the game sound.
+        3. As a user, I want to be able to keep track of the amount of flips it has taken me to complete the game.
+        4. As a user, I want to see how long it has taken me to complete the game. 
+        5. As a user, I want an alert when I get a match.
+
     -   #### Casual Player Goals
 
         1. As a casual gamer, my priority is a fun gameplay experience.
@@ -117,6 +125,29 @@ Results
 
 ### Testing User Stories from User Experience (UX) Section
 
+-   #### General User Goals
+
+    1. "As a user, I want to be able to read instruction detailing how to play the game."
+
+        1. The landing page contains a 'How to Play' explanatory text modal.
+        
+    2. "As a user,  I want to be able to toggle on/off the game's music."
+
+        1. Each game level contains a 'Play/Pause' toggle sound option, enabling the user to turn the music on or off. 
+
+    3. "As a user, I want to be able to keep track of the amount of flips it has taken me to complete the game."
+
+        1. The flip counter - which keeps a running total of the flips - is clearly displayed above the game board.
+        
+    4. "As a user, I want to see how long it has taken me to complete the game."
+
+        1. The Time counter - which displays the time and begins counting after the first flip - is clearly visible above the game board.
+        
+    5. "As a user, I want an alert when I get a match."
+
+        1. A brief audio clip plays when two cards are matched. 
+
+
 -   #### Casual Player Goals
 
     1. "As a casual gamer, my priority is a fun gameplay experience.".
@@ -133,6 +164,7 @@ Results
 
         1. Each level contains a 'quit' button under the game board.
         2. The Game Over/ Victory contains a 'quit' option.
+
 
 -   #### Experienced Player Goals
 
@@ -168,16 +200,16 @@ Results
 
 ### Further Testing
 
--   The game was tested on Chrome, Safari and Firefox browsers.
--   The website was viewed and tested on a variety of devices, mobile and desktop.
+-   The game was tested on Chrome, Safari and Firefox browsers (Mac OS) 
+-   The website was viewed and tested on a variety of devices, mobile and desktop (Samsung/iPhone SE & others via Chrome's Developer Tools). 
 -   Friends and family members were asked to play the game and point out any bugs and/or user experience issues.
 
 
 ### Known Bugs
 
 -   Resolved: Issue with cards not flipping in Safari - fixed as per [this](https://www.w3schools.com/cssref/css3_pr_backface-visibility.asp) W3 documentation.
--   Ongoing: Issue with font sizing on game options page on both iPhone 5 and Galaxy Fold devices in Chrome's Developer Tools, unresolved by media queries.
-
+-   Ongoing: Issue with font sizing on Game Options page on both iPhone 5 and Galaxy Fold devices in Chrome's Developer Tools, unresolved by media queries.
+-   Occassional issue with victory modal not popping on Medium Level. 
 
 ## Deployment
 
