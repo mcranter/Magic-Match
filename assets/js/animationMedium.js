@@ -1,6 +1,8 @@
 //The following code was created using a tutorial by Web Dev Simplified (cited in Readme) unless otherwise stated
 //this class creates the sounds used in the game
 class AudioController {
+    /*global Audio, document*/
+	/*eslint no-undef: "error"*/
     constructor() {
         this.bgMusic = new Audio('assets/sounds/hpBG.mp3');//'this' indicates the variable belongs to bgMusic object
         this.flipSound = new Audio('assets/sounds/hpFLIP.mp3');
@@ -50,6 +52,8 @@ class mixer {
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
+/*global setTimeout, setInterval, clearInterval */
+/*eslint no-unused-vars: "error"*/
         setTimeout(() => {
             this.countdown = this.startCountdown();
             this.busy = false;
@@ -57,7 +61,7 @@ class mixer {
         this.hideCards();
         this.timer.innerText = this.timeRemaining; //resets counter & timer 
         this.ticker.innerText = this.totalClicks;
-        $('.card').removeClass('flip');//written by me
+        ('.card').removeClass('flip');//written by me
 	// shuffle board
 	this.cardsArray.forEach((card) => {
 		let randomPos = Math.floor(Math.random() * 16);
@@ -179,3 +183,4 @@ function playPause() {
     else
         Music.pause();           
     }
+    playPause();
