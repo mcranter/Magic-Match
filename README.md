@@ -122,6 +122,14 @@ Results
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results
 1.  CSS ![](assets/images/css-check.png)
 
+-   [Javascript Validator](https://validatejavascript.com/) - 
+Results
+1. Animation ![](assets/images/js-easy.png)
+2. Animation Medium ![](assets/images/js-medium.png)
+3. Animation Hard ![](assets/images/js-hard.png)
+4. Script ![](assets/images/script-js.png)
+5. Script Medium ![](assets/images/js-med-val.png)
+6. Script Hard ![](assets/images/hard-js-val.png)
 
 ### Testing User Stories from User Experience (UX) Section
 
