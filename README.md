@@ -13,7 +13,7 @@
     -   #### General User Goals
 
         1. As a user, I want to be able to read the games instruction (how to play the game)
-        2. As a user,  I want to be able to toggle on/off the game sound.
+        2. As a user,  I want to be able to toggle on/off the background music.
         3. As a user, I want to be able to keep track of the amount of flips it has taken me to complete the game.
         4. As a user, I want to see how long it has taken me to complete the game. 
         5. As a user, I want an alert when I get a match.
@@ -34,7 +34,8 @@
         2. To create an enjoyable, rewarding bug-free gameplay experience.
         3. To encourage multiple replays.
 
-    -   ### Design
+*   ### Design
+
     -   #### Colour Scheme
         -   The main colours used are Yellow (#ebd512) and dark-orange(#f0Ad4e) for titles and modal backgrounds and Black and White for fonts.
     -   #### Typography
