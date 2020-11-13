@@ -1,4 +1,7 @@
 //Code created using tutorial by FreeCodeCamp (cited in Readme)
+/*global document, overlay, setTimeout, alert, window */
+/*eslint no-undef: "error"*/
+
 const cards = document.querySelectorAll('.card');
 
 //Modal controls - Code created using tutorial by Web Dev Simplified (cited in Readme)
@@ -7,12 +10,14 @@ function openModal(modal) {
     modal.classList.add('active')
     overlay.classList.add('active')
 }
+openModal();
 
 function closeModal(modal) {
     if (modal == null) return
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+closeModal();
 
 //All of following Code was created using tutorial by FreeCodeCamp (cited in Readme), until line 78
 let hasFlippedCard = false;
@@ -36,6 +41,7 @@ function flipCard(){
 
     checkForMatch();
 }
+
 
 //ternary operator used to check if cards match
 function checkForMatch () {
@@ -86,8 +92,7 @@ document.querySelector('.memory-game').addEventListener('click', function (e) {
 
 //written by me 
 //quit modal
-function sure() {
+function sure() { // eslint-disable-line no-unused-vars
   alert("Sure you want to quit?");
   window.location.href = 'index.html';
 }
-

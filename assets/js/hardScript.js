@@ -1,4 +1,7 @@
 //Code created using tutorial by FreeCodeCamp (cited in Readme)
+/*global document, overlay, setTimeout, alert, window */
+/*eslint no-undef: "error"*/
+
 const cards = document.querySelectorAll('.card');
 
 //Modal controls - Code created using tutorial by Web Dev Simplified (cited in Readme)
@@ -115,7 +118,7 @@ document.querySelector('.memory-game').addEventListener('click', function (e) {
 
 //written by me 
 //quit modal
-function sure() {
+function sure() { // eslint-disable-line no-unused-vars
   alert("Sure you want to quit?");
   window.location.href = 'index.html';
 }
