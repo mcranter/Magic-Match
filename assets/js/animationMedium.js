@@ -61,7 +61,7 @@ class mixer {
         this.hideCards();
         this.timer.innerText = this.timeRemaining; //resets counter & timer 
         this.ticker.innerText = this.totalClicks;
-        ('.card').removeClass('flip');//written by me
+        $('.card').removeClass('flip');//written by me
 	// shuffle board
 	this.cardsArray.forEach((card) => {
 		let randomPos = Math.floor(Math.random() * 16);
