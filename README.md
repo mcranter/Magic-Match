@@ -83,7 +83,7 @@
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap v3.5.1:](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+1. [Bootstrap v4.5:](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
     - Bootstrap was used to assist with the layout and styling of the landing menu.
 1. [Hover.css:](https://ianlunn.github.io/Hover/)
     - Hover.css was used to all buttons to add the float transition while being hovered over.
