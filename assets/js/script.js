@@ -6,16 +6,16 @@ const cards = document.querySelectorAll('.card');
 
 //Modal controls - Code created using tutorial by Web Dev Simplified (cited in Readme)
 function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
+    if (modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
 }
 openModal();
 
 function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
+    if (modal == null) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
 }
 closeModal();
 
