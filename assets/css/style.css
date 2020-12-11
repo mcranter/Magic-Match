@@ -1,0 +1,443 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Following code written using guide by Web Dev Simplified cited in Readme (until line 42): 
+ Game page styles */
+.game-info-container {
+    padding: 25px;
+}
+
+.game-container {
+    margin: 50px auto;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.game-info {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 50px;
+    color: #ebd512;
+    text-shadow: 2px 2px 4px #000000;
+}
+.game-info1 {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 40px;
+    color: #ebd512;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    background-image: url('assets/images/castle-spooky.jpg');
+    background-repeat: repeat;
+    display: grid;
+}
+
+/* Following code written using guide by FreeCodeCamp cited in Readme (until line 102) -
+Board container */
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;/* creates a deeper perspective when the card flips */
+    padding-bottom: 50px;
+}
+
+/* Card elements */
+.card {
+    width: calc(25% - 10px);/*calculates width relative to the margin */
+    height:calc(33.333% - 10px);
+    position: relative;
+    margin: 5px;
+    transform: scale(1);
+    transform-style:preserve-3d; /* helps creates the 3d card flips */
+    transition: transform .5s;
+    cursor: url('assets/images/cursor.cur'), auto;
+    }
+
+/* class becomes active when card is clicked */
+.card:active {
+    transform: scale(.97);
+    transition: transform .2s; /*smooths transition */
+}
+/* rotates card to create flip */
+.card.flip {
+    transform:rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    border-radius: 5px;
+    background: #0c0c0c;
+    border: 4px solid #ebd512;
+    backface-visibility: hidden; /* hides that 'reverse' image of card - this is visible by default */
+    -webkit-backface-visibility: hidden; /* fixed issue with card flip action in Safari, written by me*/
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.page-title { 
+    font-family: 'Grenze Gotisch', cursive;
+    color: #ebd512;
+    font-size: 120px;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
+}
+
+/*Following code written using guide by Web Dev Simplified cited in Readme (until line 196): 
+ Modal & overlay styling */
+.modal-title, .menu {
+    font-family: 'Grenze Gotisch', cursive;
+    color: #fafaf6;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    color:#ebd512;
+    font-family: 'Grenze Gotisch', cursive;
+    transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+/* Game over animation */
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0,0,0,.8);
+        font-size: 10em;
+    }
+}
+
+.modal1 {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(0); /*centres modal text/ hides modal */
+    transition: 200ms ease-in-out;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index:10;
+    background-color: rgb(233, 236, 49);
+    width:500px;
+    max-width:80%;
+}
+
+.modal1.active {
+    transform:translate(-50%, -50%) scale(1);
+}
+
+.modal1-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid black;
+    font-family:'Grenze Gotisch', cursive; 
+}
+
+.modal1-header .title {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.modal1-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    font-weight:bold;
+}
+
+.modal1-body {
+    padding: 10px 15px;
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 3rem;
+}
+
+/* congratulations text */
+.congr {
+    font-size: 140px;
+}
+
+ul {
+    list-style-type: none;
+}
+/*overlay displaying game-over etc */
+#overlay {
+    position:fixed;
+    opacity: 0; 
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* landing page modal created using Boostrap documentation cited in Readme (to line 245)
+Land page styles */
+#myModal1 {
+    border: 2px solid black;
+    border-radius: 10px;
+}    
+
+.modal-content {
+    background-color: #ebd512;
+    font-family: 'Grenze Gotisch';
+    font-size: 3rem;
+}
+
+.modal-body {
+    font-family: 'Grenze Gotisch';
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
+}
+
+.modal-title {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
+}
+
+/* Play buttons styles */
+.plybtn {
+    float: right;
+    background-color: #f0Ad4e;
+    color: black;
+    border: solid 1px #0c0c0c;
+    font-size: 15px;
+    }
+
+.plybtn:hover {
+    color:white;
+    border:rgb(238, 143, 11);
+}
+
+.footbtn {
+    background-color: #ebd512;
+    font-size: 22px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: 'Grenze Gotisch';
+    text-decoration: none;
+    color:rgb(254, 255, 254);
+    text-shadow: 2px 2px 4px #000000;
+    height: 80px;
+    width: 150px;
+}
+
+#quit {
+    text-decoration: none;
+    color:rgb(254, 255, 254);
+    text-shadow: 2px 2px 4px #000000;
+    background-color:#ebd512;
+}
+
+.instr {
+    font-family:'Grenze Gotisch';
+    text-shadow: 2px 2px 4px white;
+    color: rgb(12, 11, 11);
+}
+
+/* Footer/Menu button hover controls */
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#ebd512;
+}
+
+a:active {
+    color: #f0Ad4e;
+}
+
+#mute {
+    border: solid 2px #000000;
+}
+
+#mute:hover {
+    color:#ebd512;
+}
+
+#mute2 {
+    border: solid 2px #000000;
+}
+
+#mute2:hover {
+    color:#ebd512;
+}
+
+/*Footer buttons 
+Hard */
+.footer3 {
+    padding-top: 175px;
+    padding-left:170px;
+    padding-bottom: 100px;
+}
+
+/* medium */
+.footer2 {
+    padding-top: 175px;
+    padding-left:170px;
+    padding-bottom: 100px;
+}
+
+/* hard */
+.footer1 {
+    padding-bottom: 75px;
+    padding-left: 170px;
+}
+
+/* Index page styles */
+.btn {
+    width: 200px;
+}
+
+.wholeMenu {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text-center {
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+
+/* media query: iphone 5e/moto */
+@media only screen and (max-width: 360px) and (min-width:320px) {
+    .modal-body p {
+        font-size:15px;
+    }
+
+    .page-title {
+        font-size: 100px;
+    }
+
+    .plybtn {
+        width:45px;
+        text-shadow: 2px 2px 4px #fcfcfc;
+        border-radius:15%;
+    }
+
+    a .plybtn {
+        color:antiquewhite;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .modal-body p {
+        font-size:20px;
+    }
+
+    .page-title {
+        font-size: 100px;
+    }
+
+    .plybtn {
+        width:60px;
+        text-shadow: 2px 2px 4px #fcfcfc;
+        border: 2px solid #f0Ad4e;
+        border-radius:15%;
+    }
+}
+
+@media only screen and (max-width: 584px) and (min-width: 540px){
+    .modal-body p {
+        font-size:27px;
+    }
+
+    .page-title {
+        font-size: 100px;
+    }
+
+    .plybtn {
+        width:70px;
+        text-shadow: 2px 2px 4px #faf7f7;
+        border: 2px solid #f0Ad4e;
+        border-radius:15%;
+    }
+
+    .congr {
+        font-size: 120px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .victory-text {
+        height: 600px;
+    }
+}
+
+/* Resizes victory modal elements */
+@media screen and (max-width: 1024px) {
+    #dumblecore {
+        width: 600px;
+        height: auto;
+    }
+
+    .congr {
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #dumblecore { 
+        width: 500px;
+    }
+
+    #dumblecore { 
+    height: auto; 
+    }
+
+    .congr {
+        font-size: 100px;
+    }
+}
