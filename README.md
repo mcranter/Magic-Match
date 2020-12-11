@@ -1,6 +1,6 @@
-<h1 align="center">Magic Match</h1>
+# Magic Match #
 
-<h4>Welcome to Magic Match, a single-player card game testing memory recall and speed.</h4>
+#### Welcome to Magic Match, a single-player card game testing memory recall and speed.
 
 [View the live project here.](https://mcranter.github.io/Milestone-2/index.html)
 ![](assets/images/mockup1.jpg)
@@ -37,12 +37,14 @@
 *   ### Design
 
     -   #### Colour Scheme
-        -   The main colours used are Yellow (#ebd512) and dark-orange(#f0Ad4e) for titles and modal backgrounds and Black and White for fonts.
+        -   The main colours used are Yellow (#ebd512) and dark-orange (#f0Ad4e) for titles and modal backgrounds and Black and White for fonts.
     -   #### Typography
         -   The Grenze Gotisch font is the main font used in the game. This font was chosen for its evocative qualities, conjuring a gothic yet 'magical' sensibility that reflects the game's theme.
         -   Grenze Gotisch is a Google Font.
     -   #### Imagery
         -   The castle background is intended to compliment the 'Grenze Gotisch' font by reflecting the magical, gothic theme.
+    -   #### Layout
+        -   Bootstrap was used to assist with the layout and styling of the landing menu but was not used as the basis for the game board due to the unsuitability of its [Card](https://getbootstrap.com/docs/4.0/components/card/) containers.
 
 *   ### Wireframes
 
@@ -81,7 +83,7 @@
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+1. [Bootstrap v3.5.1:](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
     - Bootstrap was used to assist with the layout and styling of the landing menu.
 1. [Hover.css:](https://ianlunn.github.io/Hover/)
     - Hover.css was used to all buttons to add the float transition while being hovered over.
@@ -210,15 +212,17 @@ Results
 ### Further Testing
 
 -   The game was tested on Chrome, Safari and Firefox browsers (Mac OS) 
--   The website was viewed and tested on a variety of devices, mobile and desktop (Samsung/iPhone SE & others via Chrome's Developer Tools). 
+-   The website was viewed and tested on a variety of devices, mobile and desktop (Samsung J3/iPhone SE & others via Chrome's Developer Tools). 
 -   Friends and family members were asked to play the game and point out any bugs and/or user experience issues.
-
-
-### Known Bugs
+-   Peers at Code Institute (devices included: iPhone 11 Pro) tested, and their findings (shared with me on Slack) are visible [here](https://monosnap.com/file/3LJAkPq6OlAW9toRK87woo5blSs7tZ).
 
 -   Resolved: Issue with cards not flipping in Safari - fixed as per [this](https://www.w3schools.com/cssref/css3_pr_backface-visibility.asp) W3 documentation.
+-   Resolved: Console error displaying 'Uncaught TypeError: ".card".removeClass is not a function' resovled with the help of [this](https://stackoverflow.com/questions/41495836/uncaught-typeerror-element-removeclass-is-not-a-function-in-jquery) Stack Overflow post.
+-   Resovled: 'GET https://github.io/favicon.ico 404' console display. Resolved with the help of [this](https://stackoverflow.com/questions/35037482/favicon-with-github-pages) Stack Overflow post. A favicon (a wand) was added to solve this.
+
+### Known Bugs
 -   Ongoing: Issue with font sizing on Game Options page on both iPhone 5 and Galaxy Fold devices in Chrome's Developer Tools, unresolved by media queries.
--   Occassional issue with victory modal not popping on Medium Level. 
+-   Occassional issue with victory modal not popping on Medium Level.
 
 ## Deployment
 
@@ -278,7 +282,7 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   The flip count/timer counters/sounds and other animation functions were created using [this](https://youtu.be/3uuQ3g92oPQ) Youtube guide by [PortEXE](https://www.youtube.com/channel/UCjGQyJCSU_VVMTu5nigonqg).
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library was used during the project for [Modal](https://getbootstrap.com/docs/4.0/components/modal/) creation.
+-   [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library was used during the project for [Modal](https://getbootstrap.com/docs/4.0/components/modal/) creation.
 
 
 ### Content
