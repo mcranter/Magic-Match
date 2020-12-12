@@ -83,7 +83,7 @@
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap v4.5:](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+1. [Bootstrap v3.4:](https://getbootstrap.com/docs/3.3/)
     - Bootstrap was used to assist with the layout and styling of the landing menu.
 1. [Hover.css:](https://ianlunn.github.io/Hover/)
     - Hover.css was used to all buttons to add the float transition while being hovered over.
@@ -219,6 +219,7 @@ Results
 -   Resolved: Issue with cards not flipping in Safari - fixed as per [this](https://www.w3schools.com/cssref/css3_pr_backface-visibility.asp) W3 documentation.
 -   Resolved: Console error displaying 'Uncaught TypeError: ".card".removeClass is not a function' resovled with the help of [this](https://stackoverflow.com/questions/41495836/uncaught-typeerror-element-removeclass-is-not-a-function-in-jquery) Stack Overflow post.
 -   Resovled: 'GET https://github.io/favicon.ico 404' console display. Resolved with the help of [this](https://stackoverflow.com/questions/35037482/favicon-with-github-pages) Stack Overflow post. A favicon (a wand) was added to solve this.
+-   Unresolved: Issue with the font on the index.html resizing after upgrading from Bootstrap v3.4 to v4.5. This discrepancy, although investigated with the assistance of Bootstrap's [migration documentation](https://getbootstrap.com/docs/4.0/migration/) and Code Institute [tutor support](https://monosnap.com/file/zs5pAwUCljJD9QXHEucQYFsdtA9Ixc). As a result I reverted to using an earlier version of Bootstrap (v3.4).
 
 ### Known Bugs
 -   Ongoing: Issue with font sizing on Game Options page on both iPhone 5 and Galaxy Fold devices in Chrome's Developer Tools, unresolved by media queries.
@@ -282,7 +283,7 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   The flip count/timer counters/sounds and other animation functions were created using [this](https://youtu.be/3uuQ3g92oPQ) Youtube guide by [PortEXE](https://www.youtube.com/channel/UCjGQyJCSU_VVMTu5nigonqg).
 
--   [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library was used during the project for [Modal](https://getbootstrap.com/docs/4.0/components/modal/) creation.
+-   [Bootstrap](https://getbootstrap.com/docs/3.3/): Bootstrap Library was used during the project for [Modal](https://getbootstrap.com/docs/4.0/components/modal/) creation.
 
 
 ### Content
