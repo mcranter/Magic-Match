@@ -62,7 +62,7 @@ Board container */
     transform: scale(1);
     transform-style:preserve-3d; /* helps creates the 3d card flips */
     transition: transform .5s;
-    cursor: url('assets/images/cursor.cur'), auto;
+    cursor: url('images/cursor.cur'), auto;
     }
 
 /* class becomes active when card is clicked */
