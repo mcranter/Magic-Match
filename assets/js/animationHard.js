@@ -173,11 +173,11 @@ function ready() {
 }
 //written by me
 //plays/ pauses background music 
-var Music = document.getElementById("bgmuzak"); 
+{var Music = document.getElementById("bgmuzak"); 
 function playPause() {
     if (Music.paused)
         Music.play();
     else
         Music.pause();           
     }
-    playPause();
+    playPause();}
