@@ -2,7 +2,7 @@
 
 #### Welcome to Magic Match, a single-player card game testing memory recall and speed.
 
-[View the live project here.](https://mcranter.github.io/Milestone-2/index.html)
+[View the live project here.](https://mcranter.github.io/Magic-Match/index.html)
 ![](assets/images/mockup1.jpg)
 
 
